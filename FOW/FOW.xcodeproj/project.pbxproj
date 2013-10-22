@@ -16,8 +16,6 @@
 		4FD5A30518166A3F00987978 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30418166A3F00987978 /* Default.png */; };
 		4FD5A30718166A3F00987978 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30618166A3F00987978 /* Default@2x.png */; };
 		4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30818166A3F00987978 /* Default-568h@2x.png */; };
-		4FD5A31218166D5C00987978 /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5A31018166D5C00987978 /* HelloViewController.m */; };
-		4FD5A31318166D5C00987978 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A31118166D5C00987978 /* HelloViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +32,6 @@
 		4FD5A30418166A3F00987978 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4FD5A30618166A3F00987978 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4FD5A30818166A3F00987978 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4FD5A30F18166D5C00987978 /* HelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
-		4FD5A31018166D5C00987978 /* HelloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloViewController.m; sourceTree = "<group>"; };
-		4FD5A31118166D5C00987978 /* HelloViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +81,6 @@
 				4FD5A30118166A3F00987978 /* AppDelegate.h */,
 				4FD5A30218166A3F00987978 /* AppDelegate.m */,
 				4FD5A2F918166A3F00987978 /* Supporting Files */,
-				4FD5A30F18166D5C00987978 /* HelloViewController.h */,
-				4FD5A31018166D5C00987978 /* HelloViewController.m */,
-				4FD5A31118166D5C00987978 /* HelloViewController.xib */,
 			);
 			path = FOW;
 			sourceTree = "<group>";
@@ -162,7 +154,6 @@
 				4FD5A30518166A3F00987978 /* Default.png in Resources */,
 				4FD5A30718166A3F00987978 /* Default@2x.png in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
-				4FD5A31318166D5C00987978 /* HelloViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +166,6 @@
 			files = (
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
 				4FD5A30318166A3F00987978 /* AppDelegate.m in Sources */,
-				4FD5A31218166D5C00987978 /* HelloViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
