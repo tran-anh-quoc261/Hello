@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5293951818B97300B3FD75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293941818B97300B3FD75 /* Images.xcassets */; };
 		4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F218166A3E00987978 /* UIKit.framework */; };
 		4FD5A2F518166A3E00987978 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F418166A3E00987978 /* Foundation.framework */; };
 		4FD5A2F718166A3E00987978 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F618166A3E00987978 /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F5293941818B97300B3FD75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4FD5A2EF18166A3E00987978 /* FOW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FOW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5A2F218166A3E00987978 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4FD5A2F418166A3E00987978 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +82,7 @@
 			children = (
 				4FD5A30118166A3F00987978 /* AppDelegate.h */,
 				4FD5A30218166A3F00987978 /* AppDelegate.m */,
+				4F5293941818B97300B3FD75 /* Images.xcassets */,
 				4FD5A2F918166A3F00987978 /* Supporting Files */,
 			);
 			path = FOW;
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD5A2FD18166A3F00987978 /* InfoPlist.strings in Resources */,
+				4F5293951818B97300B3FD75 /* Images.xcassets in Resources */,
 				4FD5A30518166A3F00987978 /* Default.png in Resources */,
 				4FD5A30718166A3F00987978 /* Default@2x.png in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
@@ -242,9 +246,12 @@
 		4FD5A30D18166A3F00987978 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FOW/FOW-Prefix.pch";
 				INFOPLIST_FILE = "FOW/FOW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -253,9 +260,12 @@
 		4FD5A30E18166A3F00987978 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FOW/FOW-Prefix.pch";
 				INFOPLIST_FILE = "FOW/FOW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,6 +290,7 @@
 				4FD5A30E18166A3F00987978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
