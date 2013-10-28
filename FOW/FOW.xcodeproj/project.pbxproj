@@ -7,7 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F35155F18191CBF0051A8D6 /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155718191CBF0051A8D6 /* blue_button.png */; };
+		4F35156018191CBF0051A8D6 /* blue_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155818191CBF0051A8D6 /* blue_button@2x.png */; };
+		4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155918191CBF0051A8D6 /* blue_button_pressed.png */; };
+		4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155A18191CBF0051A8D6 /* blue_button_pressed@2x.png */; };
+		4F35156318191CBF0051A8D6 /* dark_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155B18191CBF0051A8D6 /* dark_button.png */; };
+		4F35156418191CBF0051A8D6 /* dark_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155C18191CBF0051A8D6 /* dark_button@2x.png */; };
+		4F35156518191CBF0051A8D6 /* dark_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155D18191CBF0051A8D6 /* dark_button_pressed.png */; };
+		4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F35155E18191CBF0051A8D6 /* dark_button_pressed@2x.png */; };
+		4F35157418191DD50051A8D6 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157118191DD50051A8D6 /* libAviarySDK.a */; };
+		4F35157518191DD50051A8D6 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F35157318191DD50051A8D6 /* AviarySDKResources.bundle */; };
+		4F3515771819200F0051A8D6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515761819200F0051A8D6 /* Accelerate.framework */; };
+		4F3515791819201D0051A8D6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515781819201D0051A8D6 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4F35157B1819202E0051A8D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157A1819202E0051A8D6 /* CoreData.framework */; };
+		4F35157D181920480051A8D6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157C181920480051A8D6 /* CoreText.framework */; };
+		4F35157F1819207E0051A8D6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */; };
+		4F3515811819208C0051A8D6 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */; };
+		4F3515831819209A0051A8D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515821819209A0051A8D6 /* MessageUI.framework */; };
+		4F351585181920A20051A8D6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F351584181920A20051A8D6 /* OpenGLES.framework */; };
+		4F351587181920A90051A8D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F351586181920A90051A8D6 /* QuartzCore.framework */; };
+		4F351589181920B30051A8D6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F351588181920B30051A8D6 /* StoreKit.framework */; };
+		4F35158B181920BA0051A8D6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */; };
 		4F5293951818B97300B3FD75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293941818B97300B3FD75 /* Images.xcassets */; };
+		4F5293991818C11700B3FD75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293971818C11700B3FD75 /* MainViewController.m */; };
+		4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293981818C11700B3FD75 /* MainViewController.xib */; };
+		4F5293A31818C7EB00B3FD75 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293A11818C7EB00B3FD75 /* FlipViewController.m */; };
+		4F5293A41818C7EB00B3FD75 /* FlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293A21818C7EB00B3FD75 /* FlipViewController.xib */; };
+		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
+		4FCA61561819325700598CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCA61551819325700598CD7 /* AssetsLibrary.framework */; };
 		4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F218166A3E00987978 /* UIKit.framework */; };
 		4FD5A2F518166A3E00987978 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F418166A3E00987978 /* Foundation.framework */; };
 		4FD5A2F718166A3E00987978 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F618166A3E00987978 /* CoreGraphics.framework */; };
@@ -20,7 +47,44 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F35155718191CBF0051A8D6 /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
+		4F35155818191CBF0051A8D6 /* blue_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button@2x.png"; sourceTree = "<group>"; };
+		4F35155918191CBF0051A8D6 /* blue_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button_pressed.png; sourceTree = "<group>"; };
+		4F35155A18191CBF0051A8D6 /* blue_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button_pressed@2x.png"; sourceTree = "<group>"; };
+		4F35155B18191CBF0051A8D6 /* dark_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_button.png; sourceTree = "<group>"; };
+		4F35155C18191CBF0051A8D6 /* dark_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_button@2x.png"; sourceTree = "<group>"; };
+		4F35155D18191CBF0051A8D6 /* dark_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_button_pressed.png; sourceTree = "<group>"; };
+		4F35155E18191CBF0051A8D6 /* dark_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_button_pressed@2x.png"; sourceTree = "<group>"; };
+		4F35156918191DD50051A8D6 /* AFOpenGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOpenGLManager.h; sourceTree = "<group>"; };
+		4F35156A18191DD50051A8D6 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		4F35156B18191DD50051A8D6 /* AFPhotoEditorController+InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFPhotoEditorController+InAppPurchase.h"; sourceTree = "<group>"; };
+		4F35156C18191DD50051A8D6 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		4F35156D18191DD50051A8D6 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		4F35156E18191DD50051A8D6 /* AFPhotoEditorCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorCustomization.h; sourceTree = "<group>"; };
+		4F35156F18191DD50051A8D6 /* AFPhotoEditorProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorProduct.h; sourceTree = "<group>"; };
+		4F35157018191DD50051A8D6 /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		4F35157118191DD50051A8D6 /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		4F35157318191DD50051A8D6 /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		4F3515761819200F0051A8D6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		4F3515781819201D0051A8D6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4F35157A1819202E0051A8D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4F35157C181920480051A8D6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		4F3515821819209A0051A8D6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4F351584181920A20051A8D6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4F351586181920A90051A8D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4F351588181920B30051A8D6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4F5293941818B97300B3FD75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F5293961818C11700B3FD75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4F5293971818C11700B3FD75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4F5293981818C11700B3FD75 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4F5293A01818C7EB00B3FD75 /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
+		4F5293A11818C7EB00B3FD75 /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
+		4F5293A21818C7EB00B3FD75 /* FlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipViewController.xib; sourceTree = "<group>"; };
+		4FB17D52181A1C780041FB2B /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		4FCA61551819325700598CD7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4FD5A2EF18166A3E00987978 /* FOW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FOW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5A2F218166A3E00987978 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4FD5A2F418166A3E00987978 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,8 +105,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCA61561819325700598CD7 /* AssetsLibrary.framework in Frameworks */,
+				4F35158B181920BA0051A8D6 /* SystemConfiguration.framework in Frameworks */,
+				4F351589181920B30051A8D6 /* StoreKit.framework in Frameworks */,
+				4F351587181920A90051A8D6 /* QuartzCore.framework in Frameworks */,
+				4F351585181920A20051A8D6 /* OpenGLES.framework in Frameworks */,
+				4F3515831819209A0051A8D6 /* MessageUI.framework in Frameworks */,
+				4F3515811819208C0051A8D6 /* libz.1.2.5.dylib in Frameworks */,
+				4F35157F1819207E0051A8D6 /* libsqlite3.0.dylib in Frameworks */,
+				4F35157D181920480051A8D6 /* CoreText.framework in Frameworks */,
+				4F35157B1819202E0051A8D6 /* CoreData.framework in Frameworks */,
+				4F3515791819201D0051A8D6 /* AdSupport.framework in Frameworks */,
+				4F3515771819200F0051A8D6 /* Accelerate.framework in Frameworks */,
 				4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */,
 				4FD5A2F518166A3E00987978 /* Foundation.framework in Frameworks */,
+				4F35157418191DD50051A8D6 /* libAviarySDK.a in Frameworks */,
 				4FD5A2F718166A3E00987978 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +127,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F35155618191CBF0051A8D6 /* Button Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				4F35155718191CBF0051A8D6 /* blue_button.png */,
+				4F35155818191CBF0051A8D6 /* blue_button@2x.png */,
+				4F35155918191CBF0051A8D6 /* blue_button_pressed.png */,
+				4F35155A18191CBF0051A8D6 /* blue_button_pressed@2x.png */,
+				4F35155B18191CBF0051A8D6 /* dark_button.png */,
+				4F35155C18191CBF0051A8D6 /* dark_button@2x.png */,
+				4F35155D18191CBF0051A8D6 /* dark_button_pressed.png */,
+				4F35155E18191CBF0051A8D6 /* dark_button_pressed@2x.png */,
+			);
+			path = "Button Backgrounds";
+			sourceTree = "<group>";
+		};
+		4F35156718191DD50051A8D6 /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				4F35156818191DD50051A8D6 /* Headers */,
+				4F35157118191DD50051A8D6 /* libAviarySDK.a */,
+				4F35157218191DD50051A8D6 /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		4F35156818191DD50051A8D6 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4F35156918191DD50051A8D6 /* AFOpenGLManager.h */,
+				4F35156A18191DD50051A8D6 /* AFPhotoEditorContext.h */,
+				4F35156B18191DD50051A8D6 /* AFPhotoEditorController+InAppPurchase.h */,
+				4F35156C18191DD50051A8D6 /* AFPhotoEditorController.h */,
+				4F35156D18191DD50051A8D6 /* AFPhotoEditorControllerOptions.h */,
+				4F35156E18191DD50051A8D6 /* AFPhotoEditorCustomization.h */,
+				4F35156F18191DD50051A8D6 /* AFPhotoEditorProduct.h */,
+				4F35157018191DD50051A8D6 /* AFPhotoEditorSession.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		4F35157218191DD50051A8D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F35157318191DD50051A8D6 /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4FD5A2E618166A3E00987978 = {
 			isa = PBXGroup;
 			children = (
+				4F35156718191DD50051A8D6 /* AviarySDK */,
 				4FD5A2F818166A3E00987978 /* FOW */,
 				4FD5A2F118166A3E00987978 /* Frameworks */,
 				4FD5A2F018166A3E00987978 /* Products */,
@@ -70,6 +196,18 @@
 		4FD5A2F118166A3E00987978 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4FCA61551819325700598CD7 /* AssetsLibrary.framework */,
+				4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */,
+				4F351588181920B30051A8D6 /* StoreKit.framework */,
+				4F351586181920A90051A8D6 /* QuartzCore.framework */,
+				4F351584181920A20051A8D6 /* OpenGLES.framework */,
+				4F3515821819209A0051A8D6 /* MessageUI.framework */,
+				4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */,
+				4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */,
+				4F35157C181920480051A8D6 /* CoreText.framework */,
+				4F35157A1819202E0051A8D6 /* CoreData.framework */,
+				4F3515781819201D0051A8D6 /* AdSupport.framework */,
+				4F3515761819200F0051A8D6 /* Accelerate.framework */,
 				4FD5A2F218166A3E00987978 /* UIKit.framework */,
 				4FD5A2F418166A3E00987978 /* Foundation.framework */,
 				4FD5A2F618166A3E00987978 /* CoreGraphics.framework */,
@@ -82,7 +220,12 @@
 			children = (
 				4FD5A30118166A3F00987978 /* AppDelegate.h */,
 				4FD5A30218166A3F00987978 /* AppDelegate.m */,
-				4F5293941818B97300B3FD75 /* Images.xcassets */,
+				4F5293961818C11700B3FD75 /* MainViewController.h */,
+				4F5293971818C11700B3FD75 /* MainViewController.m */,
+				4F5293981818C11700B3FD75 /* MainViewController.xib */,
+				4F5293A01818C7EB00B3FD75 /* FlipViewController.h */,
+				4F5293A11818C7EB00B3FD75 /* FlipViewController.m */,
+				4F5293A21818C7EB00B3FD75 /* FlipViewController.xib */,
 				4FD5A2F918166A3F00987978 /* Supporting Files */,
 			);
 			path = FOW;
@@ -91,6 +234,9 @@
 		4FD5A2F918166A3F00987978 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FB17D52181A1C780041FB2B /* border.png */,
+				4F35155618191CBF0051A8D6 /* Button Backgrounds */,
+				4F5293941818B97300B3FD75 /* Images.xcassets */,
 				4FD5A2FA18166A3F00987978 /* FOW-Info.plist */,
 				4FD5A2FB18166A3F00987978 /* InfoPlist.strings */,
 				4FD5A2FE18166A3F00987978 /* main.m */,
@@ -154,9 +300,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD5A2FD18166A3F00987978 /* InfoPlist.strings in Resources */,
+				4F5293A41818C7EB00B3FD75 /* FlipViewController.xib in Resources */,
+				4F35156518191CBF0051A8D6 /* dark_button_pressed.png in Resources */,
+				4F35156018191CBF0051A8D6 /* blue_button@2x.png in Resources */,
+				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
+				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
+				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
+				4FB17D53181A1C780041FB2B /* border.png in Resources */,
 				4F5293951818B97300B3FD75 /* Images.xcassets in Resources */,
 				4FD5A30518166A3F00987978 /* Default.png in Resources */,
+				4F35155F18191CBF0051A8D6 /* blue_button.png in Resources */,
+				4F35157518191DD50051A8D6 /* AviarySDKResources.bundle in Resources */,
 				4FD5A30718166A3F00987978 /* Default@2x.png in Resources */,
+				4F35156418191CBF0051A8D6 /* dark_button@2x.png in Resources */,
+				4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */,
+				4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
+				4F5293A31818C7EB00B3FD75 /* FlipViewController.m in Sources */,
+				4F5293991818C11700B3FD75 /* MainViewController.m in Sources */,
 				4FD5A30318166A3F00987978 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +412,14 @@
 				GCC_PREFIX_HEADER = "FOW/FOW-Prefix.pch";
 				INFOPLIST_FILE = "FOW/FOW-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mulodo1/Downloads/FOW/Git/Hello/FOW/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -266,6 +434,14 @@
 				GCC_PREFIX_HEADER = "FOW/FOW-Prefix.pch";
 				INFOPLIST_FILE = "FOW/FOW-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mulodo1/Downloads/FOW/Git/Hello/FOW/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
