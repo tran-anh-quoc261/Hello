@@ -207,10 +207,13 @@
     [[self imgReview] setImage:image];
     [[self imgReview] setContentMode:UIViewContentModeScaleAspectFit];
     
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(barButtonAction:)];
-    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
-    
+//    UIBarButtonItem *rightBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(barButtonAction:)];
+//    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
+//    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+//    FlipViewController *controller = [[FlipViewController alloc] initWithNibName:@"FlipViewController" bundle:nil];
+//    [editor.navigationController pushViewController:controller animated:YES];
 }
 
 // This is called when the user taps "Cancel" in the photo editor.
@@ -220,20 +223,30 @@
 
 #pragma mark - UIImagePicker Delegate
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSURL * assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
-    
-    void(^completion)(void)  = ^(void){
+    NSURL *assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    if (assetURL) {
+        void(^completion)(void)  = ^(void){
+            
+            [[self assetLibrary] assetForURL:assetURL resultBlock:^(ALAsset *asset) {
+                if (asset){
+                    [self launchEditorWithAsset:asset];
+                }
+            } failureBlock:^(NSError *error) {
+                [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enable access to your device's photos." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }];
+        };
         
-        [[self assetLibrary] assetForURL:assetURL resultBlock:^(ALAsset *asset) {
-            if (asset){
-                [self launchEditorWithAsset:asset];
+        [self dismissViewControllerAnimated:YES completion:completion];
+    } else {
+        void(^completion)(void)  = ^(void){
+            UIImage *editImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            if (editImage) {
+                [self launchPhotoEditorWithImage:editImage highResolutionImage:nil];
             }
-        } failureBlock:^(NSError *error) {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enable access to your device's photos." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }];
-    };
-    
-    [self dismissViewControllerAnimated:YES completion:completion];
+        };
+        
+        [self dismissViewControllerAnimated:YES completion:completion];
+    }
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -247,7 +260,19 @@
 }
 
 - (IBAction)takePictureAction:(id)sender {
-    
+    if ([self hasValidAPIKey]) {
+        @try {
+            UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];  
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imagePicker.delegate = self; 
+            
+            [self presentModalViewController:imagePicker animated:YES];
+        }
+        @catch (NSException *exception) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Camera" message:@"Camera is not available" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        }
+    }
 }
 
 - (IBAction)choosePhotoAction:(id)sender {
