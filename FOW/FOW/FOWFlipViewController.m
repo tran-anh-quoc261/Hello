@@ -1,18 +1,18 @@
 //
-//  FlipViewController.m
+//  FOWFlipViewController.m
 //  FOW
 //
 //  Created by Anh Quoc on 10/24/13.
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#import "FlipViewController.h"
+#import "FOWFlipViewController.h"
 
-@interface FlipViewController ()
+@interface FOWFlipViewController ()
 
 @end
 
-@implementation FlipViewController
+@implementation FOWFlipViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

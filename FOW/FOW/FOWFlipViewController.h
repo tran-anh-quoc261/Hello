@@ -1,5 +1,5 @@
 //
-//  FlipViewController.h
+//  FOWFlipViewController.h
 //  FOW
 //
 //  Created by Anh Quoc on 10/24/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlipViewController : UITableViewController
+@interface FOWFlipViewController : UITableViewController
 
 @end

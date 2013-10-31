@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "FlipViewController.h"
+#import "FOWFlipViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <QuartzCore/QuartzCore.h>
 #import "AFPhotoEditorController.h"
@@ -207,9 +207,9 @@
     [[self imgReview] setImage:image];
     [[self imgReview] setContentMode:UIViewContentModeScaleAspectFit];
     
-//    UIBarButtonItem *rightBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(barButtonAction:)];
-//    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
-//    
+    UIBarButtonItem *rightBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(barButtonAction:)];
+    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 //    FlipViewController *controller = [[FlipViewController alloc] initWithNibName:@"FlipViewController" bundle:nil];
