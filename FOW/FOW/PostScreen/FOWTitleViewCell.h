@@ -1,5 +1,5 @@
 //
-//  FOWPostScreenTitleViewCell.h
+//  FOWTitleViewCell.h
 //  FOW
 //
 //  Created by Anh Quoc on 11/4/13.
@@ -8,6 +8,6 @@
 
 #import "FOWViewCell.h"
 
-@interface FOWPostScreenTitleViewCell : FOWViewCell
+@interface FOWTitleViewCell : FOWViewCell
 
 @end

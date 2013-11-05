@@ -7,13 +7,17 @@
 //
 
 #import "MainViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 #import "FOWPostPhotoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AFPhotoEditorController.h"
 #import "AFPhotoEditorCustomization.h"
 #import "AFOpenGLManager.h"
 
+
 @interface MainViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate>
+
+@property (nonatomic, strong) ALAssetsLibrary * assetLibrary;
 
 @end
 
@@ -36,6 +40,10 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+    
+    // Allocate Asset Library
+    ALAssetsLibrary * assetLibrary = [[ALAssetsLibrary alloc] init];
+    [self setAssetLibrary:assetLibrary];
     
     // Start the Aviary Editor OpenGL Load
     [AFOpenGLManager beginOpenGLLoad];
@@ -75,7 +83,7 @@
 }
 
 #pragma Photo Editor Delegate Methods
-- (void) launchPhotoEditorWithImage:(UIImage *)editingResImage highResolutionImage:(UIImage *)highResImage {    
+- (void) launchPhotoEditorWithImage:(UIImage *)editingResImage {    
     // Initialize the photo editor and set its delegate
     AFPhotoEditorController * photoEditor = [[AFPhotoEditorController alloc] initWithImage:editingResImage];
     [photoEditor setDelegate:self];
@@ -105,14 +113,33 @@
 
 #pragma mark - UIImagePicker Delegate
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    void(^completion)(void)  = ^(void){
-        UIImage *editImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-        if (editImage) {
-            [self launchPhotoEditorWithImage:editImage highResolutionImage:nil];
-        }
-    };
-    
-    [self dismissViewControllerAnimated:YES completion:completion];
+    NSURL * assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    if (assetURL) {
+        void(^completion)(void)  = ^(void){
+            [[self assetLibrary] assetForURL:assetURL resultBlock:^(ALAsset *asset) {
+                if (asset){
+                    CGImageRef image = [[asset defaultRepresentation] fullScreenImage];
+                    UIImage * editImage = [UIImage imageWithCGImage:image scale:1.0 orientation:UIImageOrientationUp];
+                    if (editImage) {
+                        [self launchPhotoEditorWithImage:editImage];
+                    }
+                }
+            } failureBlock:^(NSError *error) {
+                [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enable access to your device's photos." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }];
+        };
+        
+        [self dismissViewControllerAnimated:YES completion:completion];
+    } else {
+        void(^completion)(void)  = ^(void){
+            UIImage *editImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            if (editImage) {
+                [self launchPhotoEditorWithImage:editImage];
+            }
+        };
+        
+        [self dismissViewControllerAnimated:YES completion:completion];
+    }
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -123,7 +150,7 @@
 #pragma mark - Button Action
 - (void)barButtonAction:(id)sender {
     UIImage *editImage = [self.imgReview image];
-    [self launchPhotoEditorWithImage:editImage highResolutionImage:nil];
+    [self launchPhotoEditorWithImage:editImage];
 }
 
 - (IBAction)takePictureAction:(id)sender {

@@ -39,10 +39,10 @@
 		4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C73D182750F200346F21 /* FOWUtils.m */; };
 		4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74518278B5000346F21 /* FOWManagerImageProcess.m */; };
 		4FB5C7481827A0D400346F21 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C7471827A0D400346F21 /* icon_profile.png */; };
-		4FB5C74B1827A10700346F21 /* FOWPostScreenMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */; };
-		4FB5C74D1827A13B00346F21 /* FOWPostScreenMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */; };
-		4FB5C7501827A1CA00346F21 /* FOWPostScreenTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */; };
-		4FB5C7521827A1E600346F21 /* FOWPostScreenTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */; };
+		4FB5C74B1827A10700346F21 /* FOWMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74A1827A10700346F21 /* FOWMainViewCell.m */; };
+		4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C74C1827A13B00346F21 /* FOWMainViewCell.xib */; };
+		4FB5C7501827A1CA00346F21 /* FOWTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74F1827A1CA00346F21 /* FOWTitleViewCell.m */; };
+		4FB5C7521827A1E600346F21 /* FOWTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C7511827A1E600346F21 /* FOWTitleViewCell.xib */; };
 		4FB5C7551827A59900346F21 /* FOWCustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C7541827A59900346F21 /* FOWCustomTextView.m */; };
 		4FCA61561819325700598CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCA61551819325700598CD7 /* AssetsLibrary.framework */; };
 		4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F218166A3E00987978 /* UIKit.framework */; };
@@ -107,12 +107,12 @@
 		4FB5C74418278B5000346F21 /* FOWManagerImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWManagerImageProcess.h; sourceTree = "<group>"; };
 		4FB5C74518278B5000346F21 /* FOWManagerImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWManagerImageProcess.m; sourceTree = "<group>"; };
 		4FB5C7471827A0D400346F21 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
-		4FB5C7491827A10700346F21 /* FOWPostScreenMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWPostScreenMainViewCell.h; sourceTree = "<group>"; };
-		4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostScreenMainViewCell.m; sourceTree = "<group>"; };
-		4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWPostScreenMainViewCell.xib; sourceTree = "<group>"; };
-		4FB5C74E1827A1CA00346F21 /* FOWPostScreenTitleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWPostScreenTitleViewCell.h; sourceTree = "<group>"; };
-		4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostScreenTitleViewCell.m; sourceTree = "<group>"; };
-		4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWPostScreenTitleViewCell.xib; sourceTree = "<group>"; };
+		4FB5C7491827A10700346F21 /* FOWMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWMainViewCell.h; sourceTree = "<group>"; };
+		4FB5C74A1827A10700346F21 /* FOWMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWMainViewCell.m; sourceTree = "<group>"; };
+		4FB5C74C1827A13B00346F21 /* FOWMainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWMainViewCell.xib; sourceTree = "<group>"; };
+		4FB5C74E1827A1CA00346F21 /* FOWTitleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWTitleViewCell.h; sourceTree = "<group>"; };
+		4FB5C74F1827A1CA00346F21 /* FOWTitleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWTitleViewCell.m; sourceTree = "<group>"; };
+		4FB5C7511827A1E600346F21 /* FOWTitleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWTitleViewCell.xib; sourceTree = "<group>"; };
 		4FB5C7531827A59900346F21 /* FOWCustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWCustomTextView.h; sourceTree = "<group>"; };
 		4FB5C7541827A59900346F21 /* FOWCustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWCustomTextView.m; sourceTree = "<group>"; };
 		4FCA61551819325700598CD7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -225,12 +225,12 @@
 			children = (
 				4FB1F42018220710004DE2F5 /* FOWPostPhotoViewController.h */,
 				4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */,
-				4FB5C7491827A10700346F21 /* FOWPostScreenMainViewCell.h */,
-				4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */,
-				4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */,
-				4FB5C74E1827A1CA00346F21 /* FOWPostScreenTitleViewCell.h */,
-				4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */,
-				4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */,
+				4FB5C7491827A10700346F21 /* FOWMainViewCell.h */,
+				4FB5C74A1827A10700346F21 /* FOWMainViewCell.m */,
+				4FB5C74C1827A13B00346F21 /* FOWMainViewCell.xib */,
+				4FB5C74E1827A1CA00346F21 /* FOWTitleViewCell.h */,
+				4FB5C74F1827A1CA00346F21 /* FOWTitleViewCell.m */,
+				4FB5C7511827A1E600346F21 /* FOWTitleViewCell.xib */,
 			);
 			path = PostScreen;
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 				4FB5C7481827A0D400346F21 /* icon_profile.png in Resources */,
 				4F35156518191CBF0051A8D6 /* dark_button_pressed.png in Resources */,
 				4F35156018191CBF0051A8D6 /* blue_button@2x.png in Resources */,
-				4FB5C74D1827A13B00346F21 /* FOWPostScreenMainViewCell.xib in Resources */,
+				4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
 				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
 				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
@@ -415,7 +415,7 @@
 				4F35156418191CBF0051A8D6 /* dark_button@2x.png in Resources */,
 				4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */,
 				4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */,
-				4FB5C7521827A1E600346F21 /* FOWPostScreenTitleViewCell.xib in Resources */,
+				4FB5C7521827A1E600346F21 /* FOWTitleViewCell.xib in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,10 +431,10 @@
 				4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */,
 				4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */,
 				4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */,
-				4FB5C74B1827A10700346F21 /* FOWPostScreenMainViewCell.m in Sources */,
+				4FB5C74B1827A10700346F21 /* FOWMainViewCell.m in Sources */,
 				4FB1F429182211C6004DE2F5 /* FOWNavigationController.m in Sources */,
 				4FB5C7551827A59900346F21 /* FOWCustomTextView.m in Sources */,
-				4FB5C7501827A1CA00346F21 /* FOWPostScreenTitleViewCell.m in Sources */,
+				4FB5C7501827A1CA00346F21 /* FOWTitleViewCell.m in Sources */,
 				4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */,
 				4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */,
 				4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */,

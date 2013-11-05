@@ -57,8 +57,9 @@
     if ([string isEqualToString:_placeholder]) {
         return;
     }
-//    [_placeholder release];
-//    _placeholder = [string retain];
+    if (string) {
+        _placeholder = string;
+    }
     [self _updateShouldDrawPlaceholder];
 }
 
