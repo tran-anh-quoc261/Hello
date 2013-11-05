@@ -8,6 +8,9 @@
 
 #import "FOWTableViewController.h"
 
-@interface FOWPostPhotoViewController : FOWTableViewController
+@interface FOWPostPhotoViewController : FOWTableViewController {
+    NSMutableArray              *_dataSource;
+    
+}
 
 @end

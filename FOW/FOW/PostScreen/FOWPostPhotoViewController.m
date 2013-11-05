@@ -29,6 +29,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)dealloc {
+    DEBUG_LOG(@"Dealloc");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

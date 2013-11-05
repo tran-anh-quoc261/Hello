@@ -11,5 +11,13 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "FOWUtils.h"
+    #import "FOWUtil+View.h"
+    #import "Constants.h"
+
+    #ifdef DEBUG
     #define DEBUG_LOG(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+    #else
+    #define DEBUG_LOG
+    #endif
 #endif

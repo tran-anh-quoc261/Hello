@@ -18,7 +18,6 @@
 		4F35157418191DD50051A8D6 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157118191DD50051A8D6 /* libAviarySDK.a */; };
 		4F35157518191DD50051A8D6 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F35157318191DD50051A8D6 /* AviarySDKResources.bundle */; };
 		4F3515771819200F0051A8D6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515761819200F0051A8D6 /* Accelerate.framework */; };
-		4F35157B1819202E0051A8D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157A1819202E0051A8D6 /* CoreData.framework */; };
 		4F35157D181920480051A8D6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157C181920480051A8D6 /* CoreText.framework */; };
 		4F35157F1819207E0051A8D6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */; };
 		4F3515811819208C0051A8D6 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */; };
@@ -30,13 +29,21 @@
 		4F5293951818B97300B3FD75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293941818B97300B3FD75 /* Images.xcassets */; };
 		4F5293991818C11700B3FD75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293971818C11700B3FD75 /* MainViewController.m */; };
 		4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293981818C11700B3FD75 /* MainViewController.xib */; };
-		4F5293A31818C7EB00B3FD75 /* FOWFlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293A11818C7EB00B3FD75 /* FOWFlipViewController.m */; };
-		4F5293A41818C7EB00B3FD75 /* FOWFlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293A21818C7EB00B3FD75 /* FOWFlipViewController.xib */; };
 		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
 		4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */; };
 		4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F417182202A3004DE2F5 /* FOWViewCell.m */; };
 		4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */; };
 		4FB1F429182211C6004DE2F5 /* FOWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */; };
+		4FB4AB5D18235D73000BBD62 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB4AB5C18235D73000BBD62 /* CoreData.framework */; };
+		4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C73B182750F200346F21 /* FOWUtil+View.m */; };
+		4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C73D182750F200346F21 /* FOWUtils.m */; };
+		4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74518278B5000346F21 /* FOWManagerImageProcess.m */; };
+		4FB5C7481827A0D400346F21 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C7471827A0D400346F21 /* icon_profile.png */; };
+		4FB5C74B1827A10700346F21 /* FOWPostScreenMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */; };
+		4FB5C74D1827A13B00346F21 /* FOWPostScreenMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */; };
+		4FB5C7501827A1CA00346F21 /* FOWPostScreenTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */; };
+		4FB5C7521827A1E600346F21 /* FOWPostScreenTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */; };
+		4FB5C7551827A59900346F21 /* FOWCustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C7541827A59900346F21 /* FOWCustomTextView.m */; };
 		4FCA61561819325700598CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCA61551819325700598CD7 /* AssetsLibrary.framework */; };
 		4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F218166A3E00987978 /* UIKit.framework */; };
 		4FD5A2F518166A3E00987978 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5A2F418166A3E00987978 /* Foundation.framework */; };
@@ -70,7 +77,6 @@
 		4F35157318191DD50051A8D6 /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
 		4F3515761819200F0051A8D6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		4F3515781819201D0051A8D6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		4F35157A1819202E0051A8D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4F35157C181920480051A8D6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
@@ -83,9 +89,6 @@
 		4F5293961818C11700B3FD75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4F5293971818C11700B3FD75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4F5293981818C11700B3FD75 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		4F5293A01818C7EB00B3FD75 /* FOWFlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFlipViewController.h; sourceTree = "<group>"; };
-		4F5293A11818C7EB00B3FD75 /* FOWFlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFlipViewController.m; sourceTree = "<group>"; };
-		4F5293A21818C7EB00B3FD75 /* FOWFlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWFlipViewController.xib; sourceTree = "<group>"; };
 		4FB17D52181A1C780041FB2B /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		4FB1F413182200AE004DE2F5 /* FOWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWTableViewController.h; sourceTree = "<group>"; };
 		4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWTableViewController.m; sourceTree = "<group>"; };
@@ -95,6 +98,23 @@
 		4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostPhotoViewController.m; sourceTree = "<group>"; };
 		4FB1F427182211C6004DE2F5 /* FOWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWNavigationController.h; sourceTree = "<group>"; };
 		4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWNavigationController.m; sourceTree = "<group>"; };
+		4FB4AB5C18235D73000BBD62 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4FB5C73A182750F200346F21 /* FOWUtil+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FOWUtil+View.h"; sourceTree = "<group>"; };
+		4FB5C73B182750F200346F21 /* FOWUtil+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FOWUtil+View.m"; sourceTree = "<group>"; };
+		4FB5C73C182750F200346F21 /* FOWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWUtils.h; sourceTree = "<group>"; };
+		4FB5C73D182750F200346F21 /* FOWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWUtils.m; sourceTree = "<group>"; };
+		4FB5C7401827521900346F21 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4FB5C74418278B5000346F21 /* FOWManagerImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWManagerImageProcess.h; sourceTree = "<group>"; };
+		4FB5C74518278B5000346F21 /* FOWManagerImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWManagerImageProcess.m; sourceTree = "<group>"; };
+		4FB5C7471827A0D400346F21 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
+		4FB5C7491827A10700346F21 /* FOWPostScreenMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWPostScreenMainViewCell.h; sourceTree = "<group>"; };
+		4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostScreenMainViewCell.m; sourceTree = "<group>"; };
+		4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWPostScreenMainViewCell.xib; sourceTree = "<group>"; };
+		4FB5C74E1827A1CA00346F21 /* FOWPostScreenTitleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWPostScreenTitleViewCell.h; sourceTree = "<group>"; };
+		4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostScreenTitleViewCell.m; sourceTree = "<group>"; };
+		4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWPostScreenTitleViewCell.xib; sourceTree = "<group>"; };
+		4FB5C7531827A59900346F21 /* FOWCustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWCustomTextView.h; sourceTree = "<group>"; };
+		4FB5C7541827A59900346F21 /* FOWCustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWCustomTextView.m; sourceTree = "<group>"; };
 		4FCA61551819325700598CD7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4FD5A2EF18166A3E00987978 /* FOW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FOW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5A2F218166A3E00987978 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB4AB5D18235D73000BBD62 /* CoreData.framework in Frameworks */,
+				4F3515771819200F0051A8D6 /* Accelerate.framework in Frameworks */,
 				4FCA61561819325700598CD7 /* AssetsLibrary.framework in Frameworks */,
 				4F35158B181920BA0051A8D6 /* SystemConfiguration.framework in Frameworks */,
 				4F351589181920B30051A8D6 /* StoreKit.framework in Frameworks */,
@@ -125,8 +147,6 @@
 				4F3515811819208C0051A8D6 /* libz.1.2.5.dylib in Frameworks */,
 				4F35157F1819207E0051A8D6 /* libsqlite3.0.dylib in Frameworks */,
 				4F35157D181920480051A8D6 /* CoreText.framework in Frameworks */,
-				4F35157B1819202E0051A8D6 /* CoreData.framework in Frameworks */,
-				4F3515771819200F0051A8D6 /* Accelerate.framework in Frameworks */,
 				4FD5A2F318166A3E00987978 /* UIKit.framework in Frameworks */,
 				4FD5A2F518166A3E00987978 /* Foundation.framework in Frameworks */,
 				4F35157418191DD50051A8D6 /* libAviarySDK.a in Frameworks */,
@@ -194,6 +214,8 @@
 				4FB1F417182202A3004DE2F5 /* FOWViewCell.m */,
 				4FB1F427182211C6004DE2F5 /* FOWNavigationController.h */,
 				4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */,
+				4FB5C7531827A59900346F21 /* FOWCustomTextView.h */,
+				4FB5C7541827A59900346F21 /* FOWCustomTextView.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -203,6 +225,12 @@
 			children = (
 				4FB1F42018220710004DE2F5 /* FOWPostPhotoViewController.h */,
 				4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */,
+				4FB5C7491827A10700346F21 /* FOWPostScreenMainViewCell.h */,
+				4FB5C74A1827A10700346F21 /* FOWPostScreenMainViewCell.m */,
+				4FB5C74C1827A13B00346F21 /* FOWPostScreenMainViewCell.xib */,
+				4FB5C74E1827A1CA00346F21 /* FOWPostScreenTitleViewCell.h */,
+				4FB5C74F1827A1CA00346F21 /* FOWPostScreenTitleViewCell.m */,
+				4FB5C7511827A1E600346F21 /* FOWPostScreenTitleViewCell.xib */,
 			);
 			path = PostScreen;
 			sourceTree = "<group>";
@@ -222,11 +250,28 @@
 				4F5293961818C11700B3FD75 /* MainViewController.h */,
 				4F5293971818C11700B3FD75 /* MainViewController.m */,
 				4F5293981818C11700B3FD75 /* MainViewController.xib */,
-				4F5293A01818C7EB00B3FD75 /* FOWFlipViewController.h */,
-				4F5293A11818C7EB00B3FD75 /* FOWFlipViewController.m */,
-				4F5293A21818C7EB00B3FD75 /* FOWFlipViewController.xib */,
 			);
 			name = MainController;
+			sourceTree = "<group>";
+		};
+		4FB5C739182750DA00346F21 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4FB5C73A182750F200346F21 /* FOWUtil+View.h */,
+				4FB5C73B182750F200346F21 /* FOWUtil+View.m */,
+				4FB5C73C182750F200346F21 /* FOWUtils.h */,
+				4FB5C73D182750F200346F21 /* FOWUtils.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4FB5C74318278B1300346F21 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4FB5C74418278B5000346F21 /* FOWManagerImageProcess.h */,
+				4FB5C74518278B5000346F21 /* FOWManagerImageProcess.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		4FD5A2E618166A3E00987978 = {
@@ -250,21 +295,21 @@
 		4FD5A2F118166A3E00987978 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FCA61551819325700598CD7 /* AssetsLibrary.framework */,
-				4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */,
-				4F351588181920B30051A8D6 /* StoreKit.framework */,
-				4F351586181920A90051A8D6 /* QuartzCore.framework */,
-				4F351584181920A20051A8D6 /* OpenGLES.framework */,
-				4F3515821819209A0051A8D6 /* MessageUI.framework */,
-				4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */,
-				4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */,
-				4F35157C181920480051A8D6 /* CoreText.framework */,
-				4F35157A1819202E0051A8D6 /* CoreData.framework */,
-				4F3515781819201D0051A8D6 /* AdSupport.framework */,
+				4FB4AB5C18235D73000BBD62 /* CoreData.framework */,
 				4F3515761819200F0051A8D6 /* Accelerate.framework */,
-				4FD5A2F218166A3E00987978 /* UIKit.framework */,
-				4FD5A2F418166A3E00987978 /* Foundation.framework */,
+				4F3515781819201D0051A8D6 /* AdSupport.framework */,
+				4FCA61551819325700598CD7 /* AssetsLibrary.framework */,
 				4FD5A2F618166A3E00987978 /* CoreGraphics.framework */,
+				4F35157C181920480051A8D6 /* CoreText.framework */,
+				4FD5A2F418166A3E00987978 /* Foundation.framework */,
+				4F35157E1819207E0051A8D6 /* libsqlite3.0.dylib */,
+				4F3515801819208C0051A8D6 /* libz.1.2.5.dylib */,
+				4F3515821819209A0051A8D6 /* MessageUI.framework */,
+				4F351584181920A20051A8D6 /* OpenGLES.framework */,
+				4F351586181920A90051A8D6 /* QuartzCore.framework */,
+				4F351588181920B30051A8D6 /* StoreKit.framework */,
+				4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */,
+				4FD5A2F218166A3E00987978 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +317,8 @@
 		4FD5A2F818166A3E00987978 /* FOW */ = {
 			isa = PBXGroup;
 			children = (
+				4FB5C74318278B1300346F21 /* Managers */,
+				4FB5C739182750DA00346F21 /* Utilities */,
 				4FAFEE3B1820F78700D58251 /* Components */,
 				4FB1F4251822107E004DE2F5 /* ViewController */,
 				4FD5A30118166A3F00987978 /* AppDelegate.h */,
@@ -284,6 +331,7 @@
 		4FD5A2F918166A3F00987978 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FB5C7471827A0D400346F21 /* icon_profile.png */,
 				4FB17D52181A1C780041FB2B /* border.png */,
 				4F35155618191CBF0051A8D6 /* Button Backgrounds */,
 				4F5293941818B97300B3FD75 /* Images.xcassets */,
@@ -294,6 +342,7 @@
 				4FD5A30418166A3F00987978 /* Default.png */,
 				4FD5A30618166A3F00987978 /* Default@2x.png */,
 				4FD5A30818166A3F00987978 /* Default-568h@2x.png */,
+				4FB5C7401827521900346F21 /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -350,9 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD5A2FD18166A3F00987978 /* InfoPlist.strings in Resources */,
-				4F5293A41818C7EB00B3FD75 /* FOWFlipViewController.xib in Resources */,
+				4FB5C7481827A0D400346F21 /* icon_profile.png in Resources */,
 				4F35156518191CBF0051A8D6 /* dark_button_pressed.png in Resources */,
 				4F35156018191CBF0051A8D6 /* blue_button@2x.png in Resources */,
+				4FB5C74D1827A13B00346F21 /* FOWPostScreenMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
 				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
 				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
@@ -365,6 +415,7 @@
 				4F35156418191CBF0051A8D6 /* dark_button@2x.png in Resources */,
 				4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */,
 				4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */,
+				4FB5C7521827A1E600346F21 /* FOWPostScreenTitleViewCell.xib in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,8 +430,13 @@
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
 				4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */,
 				4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */,
-				4F5293A31818C7EB00B3FD75 /* FOWFlipViewController.m in Sources */,
+				4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */,
+				4FB5C74B1827A10700346F21 /* FOWPostScreenMainViewCell.m in Sources */,
 				4FB1F429182211C6004DE2F5 /* FOWNavigationController.m in Sources */,
+				4FB5C7551827A59900346F21 /* FOWCustomTextView.m in Sources */,
+				4FB5C7501827A1CA00346F21 /* FOWPostScreenTitleViewCell.m in Sources */,
+				4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */,
+				4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */,
 				4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */,
 				4F5293991818C11700B3FD75 /* MainViewController.m in Sources */,
 				4FD5A30318166A3F00987978 /* AppDelegate.m in Sources */,
