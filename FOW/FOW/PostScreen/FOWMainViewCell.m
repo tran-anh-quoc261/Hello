@@ -30,6 +30,10 @@
 
 - (void)configView {
     [self.txtDescription setPlaceholder:@"Write a description..."];
+    UIImage * blueButton = [[UIImage imageNamed:@"blue_button.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
+    UIImage * blueButtonActive = [[UIImage imageNamed:@"blue_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
+    [[self btnAddPhoto] setBackgroundImage:blueButton forState:UIControlStateNormal];
+    [[self btnAddPhoto] setBackgroundImage:blueButtonActive forState:UIControlStateHighlighted];
 }
 
 @end

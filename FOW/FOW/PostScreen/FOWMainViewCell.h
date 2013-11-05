@@ -12,5 +12,6 @@
 @interface FOWMainViewCell : FOWViewCell
 
 @property (weak, nonatomic) IBOutlet FOWCustomTextView *txtDescription;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddPhoto;
 
 @end

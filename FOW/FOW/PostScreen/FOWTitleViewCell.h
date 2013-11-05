@@ -10,4 +10,6 @@
 
 @interface FOWTitleViewCell : FOWViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *txtTitle;
+
 @end

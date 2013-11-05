@@ -10,6 +10,9 @@
 
 @interface FOWManagerImageProcess : NSObject
 
+@property (nonatomic, strong) UIImage *editImage;
+@property (nonatomic, strong) NSMutableArray *arrayImage;
+
 + (id)instance;
 
 @end
