@@ -12,11 +12,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_profile.png" id="3jh-wp-x4T">
-                    <rect key="frame" x="20" y="13" width="50" height="50"/>
+                    <rect key="frame" x="20" y="10" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="gHa-De-PZK" customClass="FOWCustomTextView">
-                    <rect key="frame" x="84" y="13" width="222" height="80"/>
+                    <rect key="frame" x="84" y="10" width="222" height="75"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -55,6 +55,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="btnAddPhoto" destination="ZRS-5s-brX" id="PME-ox-n1y"/>
+                <outlet property="imgEdit1" destination="iFy-tr-4Rr" id="Iuo-Q0-rJh"/>
+                <outlet property="imgEdit2" destination="NrN-5w-GkK" id="wsi-JC-laG"/>
+                <outlet property="imgEdit3" destination="a47-GN-i0I" id="s0E-h4-SNP"/>
+                <outlet property="imgEdit4" destination="yyR-DO-Zrg" id="zWE-Gl-fgh"/>
+                <outlet property="imgEdit5" destination="Z1M-MV-Mal" id="NtA-cj-Q6z"/>
                 <outlet property="txtDescription" destination="gHa-De-PZK" id="m3W-8D-91d"/>
             </connections>
         </view>

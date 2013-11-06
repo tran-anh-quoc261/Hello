@@ -15,5 +15,10 @@
 @property (nonatomic, assign) NSInteger numberImage;
 
 + (id)instance;
+- (void)clearData;
+- (void)addImage:(UIImage *)imgae;
+- (void)removeImageAtIndex:(NSInteger)index;
+- (BOOL)isFullImage;
+- (NSInteger)numberOfImages;
 
 @end

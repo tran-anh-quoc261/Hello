@@ -42,6 +42,8 @@
     lineBotView.backgroundColor = [UIColor lightGrayColor];
     [lineBotView setAlpha:0.5f];
     [self addSubview:lineBotView];
+    
+    [self.btnCategory setExclusiveTouch:YES];
 }
 
 - (void)dealloc {

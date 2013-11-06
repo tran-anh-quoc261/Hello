@@ -13,6 +13,7 @@
 #import "AFPhotoEditorController.h"
 #import "AFPhotoEditorCustomization.h"
 #import "AFOpenGLManager.h"
+#import "FOWManagerImageProcess.h"
 
 
 @interface MainViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate>
@@ -102,6 +103,7 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    [kFOWManagerEditPhoto addImage:image];
     FOWPostPhotoViewController *controller = [[FOWPostPhotoViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:controller animated:NO];
 }

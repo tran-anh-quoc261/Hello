@@ -12,6 +12,10 @@
 #import "FOWCategoryViewCell.h"
 #import "FOWNomalViewCell.h"
 
+#define kButtonLeft                 100
+#define kButtonRight                101
+#define kButtonAddPhoto             102
+
 @interface FOWPostPhotoViewController ()
 
 @end
@@ -38,7 +42,7 @@
 }
 
 - (void)dealloc {
-    DEBUG_LOG(@"Dealloc");
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,11 +52,27 @@
 }
 
 - (void)setupGUI {
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" 
+                                                                   style:UIBarButtonItemStyleBordered 
+                                                                  target:self 
+                                                                  action:@selector(buttonAction:)];
+    [leftButton setTag:kButtonLeft];
+    [self.navigationItem setLeftBarButtonItem:leftButton];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Post" 
+                                                                   style:UIBarButtonItemStyleBordered 
+                                                                  target:self 
+                                                                  action:@selector(buttonAction:)];
+    [rightButton setTag:kButtonRight];
+    [self.navigationItem setRightBarButtonItem:rightButton];
+    
     dataSource = [[NSMutableArray alloc] init];
     
     NSMutableArray *section0 = [[NSMutableArray alloc] init];
     FOWMainViewCell *cell0_1 = [FOWUtils loadView:[FOWMainViewCell class] FromNib:@"FOWMainViewCell"];
     [cell0_1.txtDescription setDelegate:self];
+    [cell0_1.btnAddPhoto setTag:kButtonAddPhoto];
+    [cell0_1.btnAddPhoto addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [section0 addObject:cell0_1];
     
     [dataSource addObject:section0];
@@ -136,6 +156,7 @@
     return nil;
 }
 
+
 #pragma mark - TextView Delegate
 - (void) textViewDidBeginEditing:(UITextView *)textView {
     [self.view addGestureRecognizer:gesture];
@@ -152,5 +173,46 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [self.view removeGestureRecognizer:gesture];
 }
+
+#pragma mark - AlertView Delegate and ActionSheet Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+}
+
+#pragma mark - Add and EditPhoto
+
+
+
+#pragma mark - Button Action
+- (void)buttonAction:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    switch (button.tag) {
+        case kButtonLeft: {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice" 
+                                                            message:@"This action will be delete all photo you have just taken!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"OK", nil];
+            [alert show];
+            break;
+        }
+            
+        case kButtonRight: {
+            
+            break;
+        }
+            
+        case kButtonAddPhoto: {
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
+
 
 @end

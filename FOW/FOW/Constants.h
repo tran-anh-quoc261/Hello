@@ -6,4 +6,4 @@
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#define kGPManagerEditPhoto              [FOWEditPhotoManager instance]
+#define kFOWManagerEditPhoto              [FOWManagerImageProcess instance]
