@@ -36,4 +36,12 @@
     [[self btnAddPhoto] setBackgroundImage:blueButtonActive forState:UIControlStateHighlighted];
 }
 
+- (void)layoutSubviews {
+    
+}
+
+- (void)dealloc {
+    
+}
+
 @end

@@ -36,6 +36,9 @@
 		4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F417182202A3004DE2F5 /* FOWViewCell.m */; };
 		4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */; };
 		4FB1F429182211C6004DE2F5 /* FOWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */; };
+		4FB22E351829DEED006775EF /* FOWNomalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB22E341829DEED006775EF /* FOWNomalViewCell.m */; };
+		4FB22E371829DF01006775EF /* FOWNomalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB22E361829DF01006775EF /* FOWNomalViewCell.xib */; };
+		4FB22E3B1829E1EB006775EF /* Facebook-Icon-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB22E3A1829E1EB006775EF /* Facebook-Icon-300x300.png */; };
 		4FB4AB5D18235D73000BBD62 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB4AB5C18235D73000BBD62 /* CoreData.framework */; };
 		4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C73B182750F200346F21 /* FOWUtil+View.m */; };
 		4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5C73D182750F200346F21 /* FOWUtils.m */; };
@@ -103,6 +106,10 @@
 		4FB1F42118220710004DE2F5 /* FOWPostPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWPostPhotoViewController.m; sourceTree = "<group>"; };
 		4FB1F427182211C6004DE2F5 /* FOWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWNavigationController.h; sourceTree = "<group>"; };
 		4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWNavigationController.m; sourceTree = "<group>"; };
+		4FB22E331829DEED006775EF /* FOWNomalViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWNomalViewCell.h; sourceTree = "<group>"; };
+		4FB22E341829DEED006775EF /* FOWNomalViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWNomalViewCell.m; sourceTree = "<group>"; };
+		4FB22E361829DF01006775EF /* FOWNomalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWNomalViewCell.xib; sourceTree = "<group>"; };
+		4FB22E3A1829E1EB006775EF /* Facebook-Icon-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-Icon-300x300.png"; sourceTree = "<group>"; };
 		4FB4AB5C18235D73000BBD62 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4FB5C73A182750F200346F21 /* FOWUtil+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FOWUtil+View.h"; sourceTree = "<group>"; };
 		4FB5C73B182750F200346F21 /* FOWUtil+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FOWUtil+View.m"; sourceTree = "<group>"; };
@@ -221,6 +228,9 @@
 				4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */,
 				4FB5C7531827A59900346F21 /* FOWCustomTextView.h */,
 				4FB5C7541827A59900346F21 /* FOWCustomTextView.m */,
+				4FB22E331829DEED006775EF /* FOWNomalViewCell.h */,
+				4FB22E341829DEED006775EF /* FOWNomalViewCell.m */,
+				4FB22E361829DF01006775EF /* FOWNomalViewCell.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -339,6 +349,7 @@
 		4FD5A2F918166A3F00987978 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FB22E3A1829E1EB006775EF /* Facebook-Icon-300x300.png */,
 				4FB5C7471827A0D400346F21 /* icon_profile.png */,
 				4FB17D52181A1C780041FB2B /* border.png */,
 				4F35155618191CBF0051A8D6 /* Button Backgrounds */,
@@ -413,6 +424,7 @@
 				4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
 				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
+				4FB22E3B1829E1EB006775EF /* Facebook-Icon-300x300.png in Resources */,
 				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
 				4FB17D53181A1C780041FB2B /* border.png in Resources */,
 				4F5293951818B97300B3FD75 /* Images.xcassets in Resources */,
@@ -424,6 +436,7 @@
 				4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */,
 				4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */,
 				4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */,
+				4FB22E371829DF01006775EF /* FOWNomalViewCell.xib in Resources */,
 				4FB5C7521827A1E600346F21 /* FOWTitleViewCell.xib in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
 			);
@@ -447,6 +460,7 @@
 				4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */,
 				4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */,
 				4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */,
+				4FB22E351829DEED006775EF /* FOWNomalViewCell.m in Sources */,
 				4FAD3E7E1828D103008C277A /* FOWCategoryViewCell.m in Sources */,
 				4F5293991818C11700B3FD75 /* MainViewController.m in Sources */,
 				4FD5A30318166A3F00987978 /* AppDelegate.m in Sources */,

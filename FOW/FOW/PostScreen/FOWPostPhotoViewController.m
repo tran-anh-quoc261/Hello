@@ -10,6 +10,7 @@
 #import "FOWMainViewCell.h"
 #import "FOWTitleViewCell.h"
 #import "FOWCategoryViewCell.h"
+#import "FOWNomalViewCell.h"
 
 @interface FOWPostPhotoViewController ()
 
@@ -31,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationItem setTitle:@"Post Photo"];
+    [self.navigationItem setHidesBackButton:YES];
     gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
     [self setupGUI];
 }
@@ -67,7 +69,11 @@
     
     [dataSource addObject:section2];
     
-//    NSMutableArray *section3 = [[NSMutableArray alloc] init];
+    NSMutableArray *section3 = [[NSMutableArray alloc] init];
+    FOWNomalViewCell *cell3_1 = [FOWUtils loadView:[FOWNomalViewCell class] FromNib:@"FOWNomalViewCell"];
+    [section3 addObject:cell3_1];
+    
+    [dataSource addObject:section3];
 }
 
 #pragma mark - Private method Helper

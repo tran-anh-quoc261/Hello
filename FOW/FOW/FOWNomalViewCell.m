@@ -1,14 +1,14 @@
 //
-//  FOWTitleViewCell.m
+//  FOWNomalViewCell.m
 //  FOW
 //
-//  Created by Anh Quoc on 11/4/13.
+//  Created by Anh Quoc on 11/6/13.
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#import "FOWTitleViewCell.h"
+#import "FOWNomalViewCell.h"
 
-@implementation FOWTitleViewCell
+@implementation FOWNomalViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {

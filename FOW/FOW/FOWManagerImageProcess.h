@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImage *editImage;
 @property (nonatomic, strong) NSMutableArray *arrayImage;
+@property (nonatomic, assign) NSInteger numberImage;
 
 + (id)instance;
 

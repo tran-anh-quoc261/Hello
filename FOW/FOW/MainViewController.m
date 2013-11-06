@@ -103,7 +103,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
     FOWPostPhotoViewController *controller = [[FOWPostPhotoViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 // This is called when the user taps "Cancel" in the photo editor.

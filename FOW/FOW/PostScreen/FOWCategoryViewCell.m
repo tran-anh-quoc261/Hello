@@ -44,4 +44,8 @@
     [self addSubview:lineBotView];
 }
 
+- (void)dealloc {
+    
+}
+
 @end
