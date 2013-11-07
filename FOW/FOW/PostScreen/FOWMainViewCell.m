@@ -34,84 +34,142 @@
         [self.btnAddPhoto setAlpha:0.5f];
     }
     
-    switch ([kFOWManagerEditPhoto numberOfImages]) {
+    NSInteger numberImages = [kFOWManagerEditPhoto numberOfImages];
+    switch (numberImages) {
         case 1: {
-            [self.imgEdit1 setImage:[kFOWManagerEditPhoto editImage]];
+            [self.imgEdit1 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
             [self.imgEdit1 setContentMode:UIViewContentModeScaleAspectFit];
-            
-            [self configGUIWithNumberImage:[kFOWManagerEditPhoto numberOfImages]];
             break;
         }
             
         case 2: {
+            [self.imgEdit1 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit1 setContentMode:UIViewContentModeScaleAspectFit];
             
+            [self.imgEdit2 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:1]];
+            [self.imgEdit2 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit3 setImage:nil];
+            [self.imgEdit4 setImage:nil];
+            [self.imgEdit5 setImage:nil];
             break;
         }
             
         case 3: {
+            [self.imgEdit1 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit1 setContentMode:UIViewContentModeScaleAspectFit];
             
+            [self.imgEdit2 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:1]];
+            [self.imgEdit2 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit3 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:2]];
+            [self.imgEdit3 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit4 setImage:nil];
+            [self.imgEdit5 setImage:nil];
             break;
         }
             
         case 4: {
+            [self.imgEdit1 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit1 setContentMode:UIViewContentModeScaleAspectFit];
             
+            [self.imgEdit2 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:1]];
+            [self.imgEdit2 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit3 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:2]];
+            [self.imgEdit3 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit4 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:3]];
+            [self.imgEdit4 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit5 setImage:nil];
             break;
         }
             
         case 5: {
+            [self.imgEdit1 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit1 setContentMode:UIViewContentModeScaleAspectFit];
             
+            [self.imgEdit2 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:1]];
+            [self.imgEdit2 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit3 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit3 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit4 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:1]];
+            [self.imgEdit4 setContentMode:UIViewContentModeScaleAspectFit];
+            
+            [self.imgEdit5 setImage:[[kFOWManagerEditPhoto arrayImage] objectAtIndex:0]];
+            [self.imgEdit5 setContentMode:UIViewContentModeScaleAspectFit];
             break;
         }
             
         default:
             break;
     }
+    
+    [self configGUIWithNumberImage:numberImages];
 }
 
 - (void)configGUIWithNumberImage:(NSInteger)number {
     switch (number) {
         case 1: {
-            [self.imgEdit1 setHidden:YES];
-            [self.imgEdit2 setHidden:NO];
-            [self.imgEdit3 setHidden:NO];
-            [self.imgEdit4 setHidden:NO];
-            [self.imgEdit5 setHidden:NO];
-            break;
-        }
+            [self.imgEdit2 setImage:nil];
+            [self.imgEdit3 setImage:nil];
+            [self.imgEdit4 setImage:nil];
+            [self.imgEdit5 setImage:nil];
             
-        case 2: {
-            [self.imgEdit1 setHidden:YES];
-            [self.imgEdit2 setHidden:YES];
-            [self.imgEdit3 setHidden:NO];
-            [self.imgEdit4 setHidden:NO];
-            [self.imgEdit5 setHidden:NO];
-            break;
-        }
-            
-        case 3: {
-            [self.imgEdit1 setHidden:YES];
-            [self.imgEdit2 setHidden:YES];
-            [self.imgEdit3 setHidden:YES];
-            [self.imgEdit4 setHidden:NO];
-            [self.imgEdit5 setHidden:NO];
-            break;
-        }
-            
-        case 4: {
-            [self.imgEdit1 setHidden:YES];
-            [self.imgEdit2 setHidden:YES];
-            [self.imgEdit3 setHidden:YES];
-            [self.imgEdit4 setHidden:YES];
-            [self.imgEdit5 setHidden:NO];
-            break;
-        }
-            
-        case 5: {
-            [self.imgEdit1 setHidden:YES];
+            [self.imgEdit1 setHidden:NO];
             [self.imgEdit2 setHidden:YES];
             [self.imgEdit3 setHidden:YES];
             [self.imgEdit4 setHidden:YES];
             [self.imgEdit5 setHidden:YES];
+            break;
+        }
+            
+        case 2: {
+            [self.imgEdit3 setImage:nil];
+            [self.imgEdit4 setImage:nil];
+            [self.imgEdit5 setImage:nil];
+            
+            [self.imgEdit1 setHidden:NO];
+            [self.imgEdit2 setHidden:NO];
+            [self.imgEdit3 setHidden:YES];
+            [self.imgEdit4 setHidden:YES];
+            [self.imgEdit5 setHidden:YES];
+            break;
+        }
+            
+        case 3: {
+            [self.imgEdit4 setImage:nil];
+            [self.imgEdit5 setImage:nil];
+            
+            [self.imgEdit1 setHidden:NO];
+            [self.imgEdit2 setHidden:NO];
+            [self.imgEdit3 setHidden:NO];
+            [self.imgEdit4 setHidden:YES];
+            [self.imgEdit5 setHidden:YES];
+            break;
+        }
+            
+        case 4: {
+            [self.imgEdit5 setImage:nil];
+            
+            [self.imgEdit1 setHidden:NO];
+            [self.imgEdit2 setHidden:NO];
+            [self.imgEdit3 setHidden:NO];
+            [self.imgEdit4 setHidden:NO];
+            [self.imgEdit5 setHidden:YES];
+            break;
+        }
+            
+        case 5: {
+            [self.imgEdit1 setHidden:NO];
+            [self.imgEdit2 setHidden:NO];
+            [self.imgEdit3 setHidden:NO];
+            [self.imgEdit4 setHidden:NO];
+            [self.imgEdit5 setHidden:NO];
             break;
         }
     }

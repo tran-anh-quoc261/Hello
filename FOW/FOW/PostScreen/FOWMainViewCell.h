@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgEdit4;
 @property (weak, nonatomic) IBOutlet UIImageView *imgEdit5;
 
+- (void)configView;
+
 @end

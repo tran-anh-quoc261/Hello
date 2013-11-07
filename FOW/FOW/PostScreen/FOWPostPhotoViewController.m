@@ -11,25 +11,21 @@
 #import "FOWTitleViewCell.h"
 #import "FOWCategoryViewCell.h"
 #import "FOWNomalViewCell.h"
+#import "FOWManagerImageProcess.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "AFPhotoEditorController.h"
 
 #define kButtonLeft                 100
 #define kButtonRight                101
 #define kButtonAddPhoto             102
 
-@interface FOWPostPhotoViewController ()
+@interface FOWPostPhotoViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate>
+
+@property (nonatomic, strong) ALAssetsLibrary * assetLibrary;
 
 @end
 
 @implementation FOWPostPhotoViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -38,6 +34,11 @@
     [self.navigationItem setTitle:@"Post Photo"];
     [self.navigationItem setHidesBackButton:YES];
     gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
+    
+    // Allocate Asset Library
+    ALAssetsLibrary * assetLibrary = [[ALAssetsLibrary alloc] init];
+    [self setAssetLibrary:assetLibrary];
+    
     [self setupGUI];
 }
 
@@ -97,7 +98,7 @@
 }
 
 #pragma mark - Private method Helper
-- (void)hideKeyboard:(id) sender {
+- (void)hideKeyboard:(id)sender {
     [FOWUtils hideKeyboard:self.view];
 }
 
@@ -175,13 +176,101 @@
 }
 
 #pragma mark - AlertView Delegate and ActionSheet Delegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != alertView.cancelButtonIndex) {
-        [self.navigationController popToRootViewControllerAnimated:NO];
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (actionSheet.destructiveButtonIndex ==  buttonIndex) {
+        if ([FOWUtils hasValidAPIKey]) {
+            @try {
+                UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];  
+                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                imagePicker.delegate = self; 
+                
+                [self presentModalViewController:imagePicker animated:YES];
+            }
+            @catch (NSException *exception) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Camera" message:@"Camera is not available" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+    } else if (buttonIndex == 1) {
+        if ([FOWUtils hasValidAPIKey]) {
+            UIImagePickerController * imagePicker = [UIImagePickerController new];
+            [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            [imagePicker setDelegate:self];
+            
+            [self presentViewController:imagePicker animated:YES completion:nil];
+        }
     }
 }
 
-#pragma mark - Add and EditPhoto
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        [kFOWManagerEditPhoto clearData];
+    }
+}
+
+#pragma mark - Photo Editor Delegate Methods
+- (void) launchPhotoEditorWithImage:(UIImage *)editingResImage {    
+    // Initialize the photo editor and set its delegate
+    AFPhotoEditorController * photoEditor = [[AFPhotoEditorController alloc] initWithImage:editingResImage];
+    [photoEditor setDelegate:self];
+    
+    // Present the photo editor.
+    [self presentViewController:photoEditor animated:YES completion:nil];
+}
+
+// This is called when the user taps "Done" in the photo editor. 
+- (void) photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image {
+    void(^completion)(void)  = ^(void){
+        [kFOWManagerEditPhoto addImage:image];
+        FOWMainViewCell *cell = (FOWMainViewCell*)[[dataSource objectAtIndex:0] objectAtIndex:0];
+        if (cell) {
+            [cell configView];
+        }
+    };
+    
+    [self dismissViewControllerAnimated:YES completion:completion];
+}
+
+// This is called when the user taps "Cancel" in the photo editor.
+- (void) photoEditorCanceled:(AFPhotoEditorController *)editor {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIImagePicker Delegate
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSURL * assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    if (assetURL) {
+        void(^completion)(void)  = ^(void){
+            [[self assetLibrary] assetForURL:assetURL resultBlock:^(ALAsset *asset) {
+                if (asset){
+                    CGImageRef image = [[asset defaultRepresentation] fullScreenImage];
+                    UIImage * editImage = [UIImage imageWithCGImage:image scale:1.0 orientation:UIImageOrientationUp];
+                    if (editImage) {
+                        [self launchPhotoEditorWithImage:editImage];
+                    }
+                }
+            } failureBlock:^(NSError *error) {
+                [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enable access to your device's photos." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }];
+        };
+        
+        [self dismissViewControllerAnimated:YES completion:completion];
+    } else {
+        void(^completion)(void)  = ^(void){
+            UIImage *editImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            if (editImage) {
+                [self launchPhotoEditorWithImage:editImage];
+            }
+        };
+        
+        [self dismissViewControllerAnimated:YES completion:completion];
+    }
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 
@@ -205,7 +294,12 @@
         }
             
         case kButtonAddPhoto: {
-            
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
+                                                                     delegate:self
+                                                            cancelButtonTitle:nil
+                                                       destructiveButtonTitle:@"Take A Picture"
+                                                            otherButtonTitles:@"Choose A Photo", nil];
+            [actionSheet showInView:self.view];
             break;
         }
             

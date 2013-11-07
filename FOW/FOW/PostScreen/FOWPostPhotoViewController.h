@@ -8,7 +8,7 @@
 
 #import "FOWTableViewController.h"
 
-@interface FOWPostPhotoViewController : FOWTableViewController <UITextViewDelegate, UITextFieldDelegate, UIAlertViewDelegate, UIActionSheetDelegate> {
+@interface FOWPostPhotoViewController : FOWTableViewController <UITextViewDelegate, UITextFieldDelegate> {
     NSMutableArray              *dataSource;
     UITapGestureRecognizer      *gesture;
     

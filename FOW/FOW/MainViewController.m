@@ -9,9 +9,7 @@
 #import "MainViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "FOWPostPhotoViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "AFPhotoEditorController.h"
-#import "AFPhotoEditorCustomization.h"
 #import "AFOpenGLManager.h"
 #import "FOWManagerImageProcess.h"
 
@@ -59,18 +57,6 @@
 
 #pragma mark - Load View
 - (void)setupView {
-    UIColor * borderColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"border.png"]];
-    [self.viewBorder setBackgroundColor:borderColor];
-    
-    CALayer * borderLayer = [self.viewBorder layer];
-    [borderLayer setCornerRadius:5.0f];
-    [borderLayer setBorderColor:[[UIColor blackColor] CGColor]];
-    [borderLayer setBorderWidth:2.0f];
-    [borderLayer setMasksToBounds:YES];
-    
-    UIImageView * previewView = [UIImageView new];
-    [previewView setContentMode:UIViewContentModeCenter];
-    
     // Customize UI Components
     UIImage * blueButton = [[UIImage imageNamed:@"blue_button.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
     UIImage * blueButtonActive = [[UIImage imageNamed:@"blue_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
@@ -83,7 +69,7 @@
     [[self btnChooseAPhoto] setBackgroundImage:darkButtonActive forState:UIControlStateHighlighted];
 }
 
-#pragma Photo Editor Delegate Methods
+#pragma mark - Photo Editor Delegate Methods
 - (void) launchPhotoEditorWithImage:(UIImage *)editingResImage {    
     // Initialize the photo editor and set its delegate
     AFPhotoEditorController * photoEditor = [[AFPhotoEditorController alloc] initWithImage:editingResImage];
@@ -95,12 +81,6 @@
 
 // This is called when the user taps "Done" in the photo editor. 
 - (void) photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image {
-    [[self imgReview] setImage:image];
-    [[self imgReview] setContentMode:UIViewContentModeScaleAspectFit];
-    
-    UIBarButtonItem *rightBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(barButtonAction:)];
-    [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
     
     [kFOWManagerEditPhoto addImage:image];
@@ -150,11 +130,6 @@
 
 
 #pragma mark - Button Action
-- (void)barButtonAction:(id)sender {
-    UIImage *editImage = [self.imgReview image];
-    [self launchPhotoEditorWithImage:editImage];
-}
-
 - (IBAction)takePictureAction:(id)sender {
     if ([FOWUtils hasValidAPIKey]) {
         @try {

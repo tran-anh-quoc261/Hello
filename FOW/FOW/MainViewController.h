@@ -12,8 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnTakeAPicture;
 @property (weak, nonatomic) IBOutlet UIButton *btnChooseAPhoto;
-@property (weak, nonatomic) IBOutlet UIImageView *imgReview;
-@property (weak, nonatomic) IBOutlet UIView *viewBorder;
 
 
 - (IBAction)takePictureAction:(id)sender;
