@@ -14,12 +14,18 @@
 #import "FOWManagerImageProcess.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "AFPhotoEditorController.h"
+#import "FOWReviewViewController.h"
 
 #define kButtonLeft                 100
 #define kButtonRight                101
 #define kButtonAddPhoto             102
+#define kButtonShowPhoto1           103
+#define kButtonShowPhoto2           104
+#define kButtonShowPhoto3           105
+#define kButtonShowPhoto4           106
+#define kButtonShowPhoto5           107
 
-@interface FOWPostPhotoViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate>
+@interface FOWPostPhotoViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate, FOWReviewViewControllerDelegate>
 
 @property (nonatomic, strong) ALAssetsLibrary * assetLibrary;
 
@@ -39,7 +45,7 @@
     ALAssetsLibrary * assetLibrary = [[ALAssetsLibrary alloc] init];
     [self setAssetLibrary:assetLibrary];
     
-    [self setupGUI];
+    [self setupView];
 }
 
 - (void)dealloc {
@@ -52,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupGUI {
+- (void)setupView {
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" 
                                                                    style:UIBarButtonItemStyleBordered 
                                                                   target:self 
@@ -74,6 +80,22 @@
     [cell0_1.txtDescription setDelegate:self];
     [cell0_1.btnAddPhoto setTag:kButtonAddPhoto];
     [cell0_1.btnAddPhoto addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [cell0_1.imgEdit1 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell0_1.imgEdit1 setTag:kButtonShowPhoto1];
+    
+    [cell0_1.imgEdit2 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell0_1.imgEdit2 setTag:kButtonShowPhoto2];
+    
+    [cell0_1.imgEdit3 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell0_1.imgEdit3 setTag:kButtonShowPhoto3];
+    
+    [cell0_1.imgEdit4 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell0_1.imgEdit4 setTag:kButtonShowPhoto4];
+    
+    [cell0_1.imgEdit5 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cell0_1.imgEdit5 setTag:kButtonShowPhoto5];
+    
     [section0 addObject:cell0_1];
     
     [dataSource addObject:section0];
@@ -100,6 +122,14 @@
 #pragma mark - Private method Helper
 - (void)hideKeyboard:(id)sender {
     [FOWUtils hideKeyboard:self.view];
+}
+
+- (void)showReviewControllerWithIndexImage:(NSInteger)index {
+    FOWReviewViewController *controller = [[FOWReviewViewController alloc] initWithNibName:@"FOWReviewViewController" bundle:nil];
+    [controller setIndexImage:index];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    [self.navigationController presentModalViewController:navController animated:YES];
 }
 
 #pragma mark - TableView DataSource
@@ -272,13 +302,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-
 #pragma mark - Button Action
 - (void)buttonAction:(id)sender {
     UIButton *button = (UIButton*)sender;
     switch (button.tag) {
         case kButtonLeft: {
+            // Cancel post and go to the root view
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice" 
                                                             message:@"This action will be delete all photo you have just taken!"
                                                            delegate:self
@@ -289,17 +318,44 @@
         }
             
         case kButtonRight: {
+            // Post Photo
             
             break;
         }
             
         case kButtonAddPhoto: {
+            // Add photo to post (max 5 photos)
             UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
                                                                      delegate:self
-                                                            cancelButtonTitle:nil
+                                                            cancelButtonTitle:@"Cancel"
                                                        destructiveButtonTitle:@"Take A Picture"
                                                             otherButtonTitles:@"Choose A Photo", nil];
             [actionSheet showInView:self.view];
+            break;
+        }
+            
+        case kButtonShowPhoto1: {
+            [self showReviewControllerWithIndexImage:0];
+            break;
+        }
+            
+        case kButtonShowPhoto2: {
+            [self showReviewControllerWithIndexImage:1];
+            break;
+        }
+            
+        case kButtonShowPhoto3: {
+            [self showReviewControllerWithIndexImage:2];
+            break;
+        }
+            
+        case kButtonShowPhoto4: {
+            [self showReviewControllerWithIndexImage:3];
+            break;
+        }
+            
+        case kButtonShowPhoto5: {
+            [self showReviewControllerWithIndexImage:4];
             break;
         }
             

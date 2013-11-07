@@ -13,11 +13,11 @@
 
 @property (weak, nonatomic) IBOutlet FOWCustomTextView *txtDescription;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddPhoto;
-@property (weak, nonatomic) IBOutlet UIImageView *imgEdit1;
-@property (weak, nonatomic) IBOutlet UIImageView *imgEdit2;
-@property (weak, nonatomic) IBOutlet UIImageView *imgEdit3;
-@property (weak, nonatomic) IBOutlet UIImageView *imgEdit4;
-@property (weak, nonatomic) IBOutlet UIImageView *imgEdit5;
+@property (weak, nonatomic) IBOutlet UIButton *imgEdit1;
+@property (weak, nonatomic) IBOutlet UIButton *imgEdit2;
+@property (weak, nonatomic) IBOutlet UIButton *imgEdit3;
+@property (weak, nonatomic) IBOutlet UIButton *imgEdit4;
+@property (weak, nonatomic) IBOutlet UIButton *imgEdit5;
 
 - (void)configView;
 
