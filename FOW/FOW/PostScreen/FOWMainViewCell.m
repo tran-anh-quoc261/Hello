@@ -202,7 +202,13 @@
     UIImage * blueButtonActive = [[UIImage imageNamed:@"blue_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
     [[self btnAddPhoto] setBackgroundImage:blueButton forState:UIControlStateNormal];
     [[self btnAddPhoto] setBackgroundImage:blueButtonActive forState:UIControlStateHighlighted];
+    
     [self.btnAddPhoto setExclusiveTouch:YES];
+    [self.imgEdit1 setExclusiveTouch:YES];
+    [self.imgEdit2 setExclusiveTouch:YES];
+    [self.imgEdit3 setExclusiveTouch:YES];
+    [self.imgEdit4 setExclusiveTouch:YES];
+    [self.imgEdit5 setExclusiveTouch:YES];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 85.0, 320.0, 20.0)];
     [lineView setBackgroundColor:[UIColor darkGrayColor]];
@@ -210,10 +216,6 @@
     [self addSubview:lineView];
     
     [self configView];
-}
-
-- (void)dealloc {
-    
 }
 
 @end

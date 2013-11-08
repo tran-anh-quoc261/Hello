@@ -127,9 +127,18 @@
 - (void)showReviewControllerWithIndexImage:(NSInteger)index {
     FOWReviewViewController *controller = [[FOWReviewViewController alloc] initWithNibName:@"FOWReviewViewController" bundle:nil];
     [controller setIndexImage:index];
+    [controller setDelegate:self];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
     
     [self.navigationController presentModalViewController:navController animated:YES];
+}
+
+- (void)savePhotoDidFinish {
+    // Action receive when edit image did finish
+    FOWMainViewCell *cell = (FOWMainViewCell*)[[dataSource objectAtIndex:0] objectAtIndex:0];
+    if (cell) {
+        [cell configView];
+    }
 }
 
 #pragma mark - TableView DataSource

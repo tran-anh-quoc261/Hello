@@ -15,11 +15,13 @@
 @property (nonatomic, assign) NSInteger indexImage;
 @property (weak, nonatomic) IBOutlet UIButton *btnEditPhoto;
 @property (weak, nonatomic) IBOutlet UIButton *btnDeletePhoto;
+@property (weak, nonatomic) IBOutlet UIImageView *imaReview;
 @property (nonatomic, assign) id <FOWReviewViewControllerDelegate> delegate;
 
 @end
 
 @protocol FOWReviewViewControllerDelegate <NSObject>
 
+- (void)savePhotoDidFinish;
 
 @end

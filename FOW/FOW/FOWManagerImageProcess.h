@@ -10,7 +10,6 @@
 
 @interface FOWManagerImageProcess : NSObject
 
-@property (nonatomic, strong) UIImage *editImage;
 @property (nonatomic, strong) NSMutableArray *arrayImage;
 @property (nonatomic, assign) NSInteger numberImage;
 
@@ -20,5 +19,7 @@
 - (void)removeImageAtIndex:(NSInteger)index;
 - (BOOL)isFullImage;
 - (NSInteger)numberOfImages;
+- (void)editImage:(UIImage *)image atIndex:(NSInteger)index;
+- (BOOL)isEmptyImage;
 
 @end

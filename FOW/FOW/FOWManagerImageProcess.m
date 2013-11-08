@@ -25,16 +25,19 @@ static FOWManagerImageProcess *_Instance = nil;
 - (void)clearData {
     [_Instance.arrayImage removeAllObjects];
     _Instance.numberImage = 0;
-    _Instance.editImage = nil;
 }
 
 - (void)addImage:(UIImage *)imgae {
-    _Instance.editImage = imgae;
     [_Instance.arrayImage addObject:imgae];
 }
 
 - (void)removeImageAtIndex:(NSInteger)index {
-    
+    [_Instance.arrayImage removeObjectAtIndex:index];
+}
+
+- (void)editImage:(UIImage *)image atIndex:(NSInteger)index {
+    [_Instance.arrayImage removeObjectAtIndex:index];
+    [_Instance.arrayImage insertObject:image atIndex:index];
 }
 
 - (NSInteger)numberOfImages {
@@ -43,6 +46,13 @@ static FOWManagerImageProcess *_Instance = nil;
 
 - (BOOL)isFullImage {
     if ([_Instance.arrayImage count] >= 5) 
+        return YES;
+    else
+        return NO;
+}
+
+- (BOOL)isEmptyImage {
+    if ([_Instance.arrayImage count] <= 0) 
         return YES;
     else
         return NO;

@@ -29,12 +29,11 @@
 		4F5293951818B97300B3FD75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293941818B97300B3FD75 /* Images.xcassets */; };
 		4F5293991818C11700B3FD75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293971818C11700B3FD75 /* MainViewController.m */; };
 		4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293981818C11700B3FD75 /* MainViewController.xib */; };
-		4FACDEF2182B521B00FB278E /* FOWReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FACDEF0182B521B00FB278E /* FOWReviewViewController.m */; };
+		4FACCE85182CA24600210557 /* red_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE81182CA24600210557 /* red_button_pressed.png */; };
+		4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE82182CA24600210557 /* red_button_pressed@2x.png */; };
+		4FACCE87182CA24600210557 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE83182CA24600210557 /* red_button.png */; };
+		4FACCE88182CA24600210557 /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE84182CA24600210557 /* red_button@2x.png */; };
 		4FACDEF3182B521B00FB278E /* FOWReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */; };
-		4FACDEF6182B97D500FB278E /* red_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF4182B97D500FB278E /* red_button_pressed.png */; };
-		4FACDEF7182B97D500FB278E /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF5182B97D500FB278E /* red_button.png */; };
-		4FACDEFA182B9CDC00FB278E /* red_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF8182B9CDC00FB278E /* red_button_pressed@2x.png */; };
-		4FACDEFB182B9CDC00FB278E /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF9182B9CDC00FB278E /* red_button@2x.png */; };
 		4FAD3E7E1828D103008C277A /* FOWCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */; };
 		4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */; };
 		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
@@ -100,13 +99,12 @@
 		4F5293961818C11700B3FD75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4F5293971818C11700B3FD75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4F5293981818C11700B3FD75 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4FACCE81182CA24600210557 /* red_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_pressed.png; sourceTree = "<group>"; };
+		4FACCE82182CA24600210557 /* red_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_pressed@2x.png"; sourceTree = "<group>"; };
+		4FACCE83182CA24600210557 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
+		4FACCE84182CA24600210557 /* red_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button@2x.png"; sourceTree = "<group>"; };
 		4FACDEEF182B521B00FB278E /* FOWReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWReviewViewController.h; sourceTree = "<group>"; };
-		4FACDEF0182B521B00FB278E /* FOWReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWReviewViewController.m; sourceTree = "<group>"; };
 		4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWReviewViewController.xib; sourceTree = "<group>"; };
-		4FACDEF4182B97D500FB278E /* red_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_pressed.png; sourceTree = "<group>"; };
-		4FACDEF5182B97D500FB278E /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
-		4FACDEF8182B9CDC00FB278E /* red_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_pressed@2x.png"; sourceTree = "<group>"; };
-		4FACDEF9182B9CDC00FB278E /* red_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button@2x.png"; sourceTree = "<group>"; };
 		4FAD3E7C1828D103008C277A /* FOWCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWCategoryViewCell.h; sourceTree = "<group>"; };
 		4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWCategoryViewCell.m; sourceTree = "<group>"; };
 		4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWCategoryViewCell.xib; sourceTree = "<group>"; };
@@ -188,15 +186,15 @@
 				4F35155718191CBF0051A8D6 /* blue_button.png */,
 				4F35155818191CBF0051A8D6 /* blue_button@2x.png */,
 				4F35155918191CBF0051A8D6 /* blue_button_pressed.png */,
+				4FACCE81182CA24600210557 /* red_button_pressed.png */,
+				4FACCE82182CA24600210557 /* red_button_pressed@2x.png */,
+				4FACCE83182CA24600210557 /* red_button.png */,
+				4FACCE84182CA24600210557 /* red_button@2x.png */,
 				4F35155A18191CBF0051A8D6 /* blue_button_pressed@2x.png */,
 				4F35155B18191CBF0051A8D6 /* dark_button.png */,
 				4F35155C18191CBF0051A8D6 /* dark_button@2x.png */,
 				4F35155D18191CBF0051A8D6 /* dark_button_pressed.png */,
 				4F35155E18191CBF0051A8D6 /* dark_button_pressed@2x.png */,
-				4FACDEF5182B97D500FB278E /* red_button.png */,
-				4FACDEF9182B9CDC00FB278E /* red_button@2x.png */,
-				4FACDEF4182B97D500FB278E /* red_button_pressed.png */,
-				4FACDEF8182B9CDC00FB278E /* red_button_pressed@2x.png */,
 			);
 			path = "Button Backgrounds";
 			sourceTree = "<group>";
@@ -238,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				4FACDEEF182B521B00FB278E /* FOWReviewViewController.h */,
-				4FACDEF0182B521B00FB278E /* FOWReviewViewController.m */,
 				4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */,
 			);
 			name = ReViewController;
@@ -453,26 +450,26 @@
 				4F35156018191CBF0051A8D6 /* blue_button@2x.png in Resources */,
 				4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
+				4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */,
 				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
 				4FB22E3B1829E1EB006775EF /* Facebook-Icon-300x300.png in Resources */,
 				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
 				4FB17D53181A1C780041FB2B /* border.png in Resources */,
 				4F5293951818B97300B3FD75 /* Images.xcassets in Resources */,
+				4FACCE88182CA24600210557 /* red_button@2x.png in Resources */,
 				4FD5A30518166A3F00987978 /* Default.png in Resources */,
-				4FACDEFB182B9CDC00FB278E /* red_button@2x.png in Resources */,
-				4FACDEFA182B9CDC00FB278E /* red_button_pressed@2x.png in Resources */,
 				4F35155F18191CBF0051A8D6 /* blue_button.png in Resources */,
-				4FACDEF7182B97D500FB278E /* red_button.png in Resources */,
 				4F35157518191DD50051A8D6 /* AviarySDKResources.bundle in Resources */,
 				4FD5A30718166A3F00987978 /* Default@2x.png in Resources */,
 				4F35156418191CBF0051A8D6 /* dark_button@2x.png in Resources */,
 				4F35156218191CBF0051A8D6 /* blue_button_pressed@2x.png in Resources */,
 				4F35156118191CBF0051A8D6 /* blue_button_pressed.png in Resources */,
 				4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */,
-				4FACDEF6182B97D500FB278E /* red_button_pressed.png in Resources */,
+				4FACCE85182CA24600210557 /* red_button_pressed.png in Resources */,
 				4FB22E371829DF01006775EF /* FOWNomalViewCell.xib in Resources */,
 				4FB5C7521827A1E600346F21 /* FOWTitleViewCell.xib in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
+				4FACCE87182CA24600210557 /* red_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +481,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
-				4FACDEF2182B521B00FB278E /* FOWReviewViewController.m in Sources */,
 				4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */,
 				4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */,
 				4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */,
