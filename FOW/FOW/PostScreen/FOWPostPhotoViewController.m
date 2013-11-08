@@ -129,7 +129,6 @@
     [controller setIndexImage:index];
     [controller setDelegate:self];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
-    
     [self.navigationController presentModalViewController:navController animated:YES];
 }
 
