@@ -196,7 +196,6 @@
     return nil;
 }
 
-
 #pragma mark - TextView Delegate
 - (void) textViewDidBeginEditing:(UITextView *)textView {
     [self.view addGestureRecognizer:gesture];
@@ -372,6 +371,5 @@
             break;
     }
 }
-
 
 @end

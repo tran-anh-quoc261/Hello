@@ -210,7 +210,7 @@
     [self.imgEdit4 setExclusiveTouch:YES];
     [self.imgEdit5 setExclusiveTouch:YES];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 85.0, 320.0, 20.0)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 80.0, 320.0, 20.0)];
     [lineView setBackgroundColor:[UIColor darkGrayColor]];
     [lineView setAlpha:0.1f];
     [self addSubview:lineView];
