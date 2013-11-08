@@ -121,7 +121,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != alertView.cancelButtonIndex) {
         // Delete image from array image
-        [kFOWManagerEditPhoto removeObjectAtIndex:_indexImage];
+        [kFOWManagerEditPhoto removeImageAtIndex:_indexImage];
         [_delegate savePhotoDidFinish];
         [self dismissModalViewControllerAnimated:YES];
     }
