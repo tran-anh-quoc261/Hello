@@ -33,6 +33,7 @@
 		4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE82182CA24600210557 /* red_button_pressed@2x.png */; };
 		4FACCE87182CA24600210557 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE83182CA24600210557 /* red_button.png */; };
 		4FACCE88182CA24600210557 /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE84182CA24600210557 /* red_button@2x.png */; };
+		4FACCE8B182CA3C000210557 /* FOWReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FACCE8A182CA3C000210557 /* FOWReviewViewController.m */; };
 		4FACDEF3182B521B00FB278E /* FOWReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */; };
 		4FAD3E7E1828D103008C277A /* FOWCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */; };
 		4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */; };
@@ -103,6 +104,7 @@
 		4FACCE82182CA24600210557 /* red_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_pressed@2x.png"; sourceTree = "<group>"; };
 		4FACCE83182CA24600210557 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
 		4FACCE84182CA24600210557 /* red_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button@2x.png"; sourceTree = "<group>"; };
+		4FACCE8A182CA3C000210557 /* FOWReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWReviewViewController.m; sourceTree = "<group>"; };
 		4FACDEEF182B521B00FB278E /* FOWReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWReviewViewController.h; sourceTree = "<group>"; };
 		4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWReviewViewController.xib; sourceTree = "<group>"; };
 		4FAD3E7C1828D103008C277A /* FOWCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWCategoryViewCell.h; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				4FACDEEF182B521B00FB278E /* FOWReviewViewController.h */,
+				4FACCE8A182CA3C000210557 /* FOWReviewViewController.m */,
 				4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */,
 			);
 			name = ReViewController;
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FACCE8B182CA3C000210557 /* FOWReviewViewController.m in Sources */,
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
 				4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */,
 				4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */,
