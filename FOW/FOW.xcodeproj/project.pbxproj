@@ -42,6 +42,7 @@
 		4FAEB9641830AE5200DA3200 /* FOWFollowersViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */; };
 		4FAEB9661830AE6800DA3200 /* FOWFollowersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */; };
 		4FAEB9691830B16D00DA3200 /* FOWFollowingMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */; };
+		4FAEB96B1830BE8F00DA3200 /* avatar_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAEB96A1830BE8F00DA3200 /* avatar_user.png */; };
 		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
 		4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */; };
 		4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F417182202A3004DE2F5 /* FOWViewCell.m */; };
@@ -123,6 +124,7 @@
 		4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWFollowersViewCell.xib; sourceTree = "<group>"; };
 		4FAEB9671830B16D00DA3200 /* FOWFollowingMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFollowingMeViewController.h; sourceTree = "<group>"; };
 		4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFollowingMeViewController.m; sourceTree = "<group>"; };
+		4FAEB96A1830BE8F00DA3200 /* avatar_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_user.png; sourceTree = "<group>"; };
 		4FB17D52181A1C780041FB2B /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		4FB1F413182200AE004DE2F5 /* FOWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWTableViewController.h; sourceTree = "<group>"; };
 		4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWTableViewController.m; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 		4FD5A2F918166A3F00987978 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FAEB96A1830BE8F00DA3200 /* avatar_user.png */,
 				4FB22E3A1829E1EB006775EF /* Facebook-Icon-300x300.png */,
 				4FB5C7471827A0D400346F21 /* icon_profile.png */,
 				4FB17D52181A1C780041FB2B /* border.png */,
@@ -476,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FACDEF3182B521B00FB278E /* FOWReviewViewController.xib in Resources */,
+				4FAEB96B1830BE8F00DA3200 /* avatar_user.png in Resources */,
 				4FD5A2FD18166A3F00987978 /* InfoPlist.strings in Resources */,
 				4FB5C7481827A0D400346F21 /* icon_profile.png in Resources */,
 				4F35156518191CBF0051A8D6 /* dark_button_pressed.png in Resources */,

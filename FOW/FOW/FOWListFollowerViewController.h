@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FOWFollowersViewCell.h"
 
 @interface FOWListFollowerViewController : UITableViewController {
     NSMutableArray *_arrayFollower;
+    FOWFollowersViewCell *viewCell;
 }
 
 @property (nonatomic, strong) NSMutableArray *arrayFollower;

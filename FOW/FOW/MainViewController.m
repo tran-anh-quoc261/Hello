@@ -163,6 +163,11 @@
 }
 
 - (IBAction)showFollower:(id)sender {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" 
+                                                                             style:UIBarButtonItemStyleBordered
+                                                                            target:nil
+                                                                            action:nil];
+    
     FOWFollowingMeViewController *controller = [[FOWFollowingMeViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:controller animated:YES];
 }
