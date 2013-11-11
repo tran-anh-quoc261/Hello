@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FOWFollowersViewCell.h"
 
-@interface FOWListFollowerViewController : UITableViewController {
+@interface FOWListFollowerViewController : UITableViewController <FOWFollowersViewCellDelegate> {
     NSMutableArray *_arrayFollower;
     FOWFollowersViewCell *viewCell;
 }

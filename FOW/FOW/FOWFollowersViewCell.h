@@ -8,6 +8,8 @@
 
 #import "FOWViewCell.h"
 
+@protocol FOWFollowersViewCellDelegate;
+
 @interface FOWFollowersViewCell : FOWViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgAvatar;
@@ -17,6 +19,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblFollower;
 @property (weak, nonatomic) IBOutlet UILabel *lblFollowing;
 @property (weak, nonatomic) IBOutlet UILabel *lblNumberOfPost;
+@property (assign, nonatomic) id <FOWFollowersViewCellDelegate> delegate;
 
+@end
+
+@protocol FOWFollowersViewCellDelegate <NSObject>
+
+- (void)buttonActionFollow;
 
 @end

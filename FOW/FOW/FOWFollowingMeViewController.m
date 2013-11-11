@@ -33,4 +33,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - FOWFollowersViewCellDelegate Button Follow
+- (void)buttonActionFollow {
+    
+}
+
 @end

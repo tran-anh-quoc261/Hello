@@ -25,9 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Uncomment the following line to preserve selection between presentations.
-    
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +36,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -45,16 +43,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+//    return [_arrayFollower count];
     return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!viewCell) {
-        viewCell = [FOWUtils loadView:[FOWFollowersViewCell class] FromNib:@"FOWFollowersViewCell"];
-        [viewCell caliculateHeight];
-    }
-    
-    return [viewCell getHeight];
+    return 125.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,26 +56,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         viewCell = [FOWUtils loadView:[FOWFollowersViewCell class] FromNib:@"FOWFollowersViewCell"];
+        [viewCell setDelegate:self];
+        // Configure the cell...
+        
+        
         [cell addSubview:viewCell];
     }
-    
-    // Configure the cell...
     return cell;
 }
 
-/*
-#pragma mark - Table view delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
- */
+#pragma mark - FOWFollowersViewCellDelegate Button Follow
+- (void)buttonActionFollow {}
 
 @end

@@ -33,12 +33,18 @@
 }
 
 - (void)layoutSubviews {
+    [self.btnFollow addTarget:self action:@selector(actionButtonFollow:) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnFollow setExclusiveTouch:YES];
     
+    UIView *lineBotView = [[UIView alloc] initWithFrame:CGRectMake(0, 124, 320, 1)];
+    [lineBotView setBackgroundColor:[UIColor lightGrayColor]];
+    [lineBotView setAlpha:0.5f];
+    [self addSubview:lineBotView];
 }
 
-- (void)dealloc {
-    
+- (void)actionButtonFollow:(id)sender {
+    if([_delegate respondsToSelector:@selector(buttonActionFollow)])
+        [_delegate buttonActionFollow];
 }
-
 
 @end
