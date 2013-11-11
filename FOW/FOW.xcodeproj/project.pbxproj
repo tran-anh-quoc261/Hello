@@ -39,6 +39,9 @@
 		4FACDEF3182B521B00FB278E /* FOWReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FACDEF1182B521B00FB278E /* FOWReviewViewController.xib */; };
 		4FAD3E7E1828D103008C277A /* FOWCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */; };
 		4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */; };
+		4FAEB9641830AE5200DA3200 /* FOWFollowersViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */; };
+		4FAEB9661830AE6800DA3200 /* FOWFollowersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */; };
+		4FAEB9691830B16D00DA3200 /* FOWFollowingMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */; };
 		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
 		4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */; };
 		4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F417182202A3004DE2F5 /* FOWViewCell.m */; };
@@ -115,6 +118,11 @@
 		4FAD3E7C1828D103008C277A /* FOWCategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWCategoryViewCell.h; sourceTree = "<group>"; };
 		4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWCategoryViewCell.m; sourceTree = "<group>"; };
 		4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWCategoryViewCell.xib; sourceTree = "<group>"; };
+		4FAEB9621830AE5200DA3200 /* FOWFollowersViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFollowersViewCell.h; sourceTree = "<group>"; };
+		4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFollowersViewCell.m; sourceTree = "<group>"; };
+		4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWFollowersViewCell.xib; sourceTree = "<group>"; };
+		4FAEB9671830B16D00DA3200 /* FOWFollowingMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFollowingMeViewController.h; sourceTree = "<group>"; };
+		4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFollowingMeViewController.m; sourceTree = "<group>"; };
 		4FB17D52181A1C780041FB2B /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		4FB1F413182200AE004DE2F5 /* FOWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWTableViewController.h; sourceTree = "<group>"; };
 		4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWTableViewController.m; sourceTree = "<group>"; };
@@ -239,11 +247,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4FACCE8C182CC4B800210557 /* ListFollowerController */ = {
+		4FACCE8C182CC4B800210557 /* FollowingMeController */ = {
 			isa = PBXGroup;
 			children = (
+				4FAEB9671830B16D00DA3200 /* FOWFollowingMeViewController.h */,
+				4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */,
 			);
-			name = ListFollowerController;
+			name = FollowingMeController;
 			sourceTree = "<group>";
 		};
 		4FACDEEE182B520000FB278E /* ReViewController */ = {
@@ -259,20 +269,23 @@
 		4FAFEE3B1820F78700D58251 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4FB5C7531827A59900346F21 /* FOWCustomTextView.h */,
+				4FB5C7541827A59900346F21 /* FOWCustomTextView.m */,
+				4FAEB9621830AE5200DA3200 /* FOWFollowersViewCell.h */,
+				4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */,
+				4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */,
+				4FACCE8D182CC50500210557 /* FOWListFollowerViewController.h */,
+				4FACCE8E182CC50500210557 /* FOWListFollowerViewController.m */,
+				4FACCE8F182CC50500210557 /* FOWListFollowerViewController.xib */,
+				4FB1F427182211C6004DE2F5 /* FOWNavigationController.h */,
+				4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */,
+				4FB22E331829DEED006775EF /* FOWNomalViewCell.h */,
+				4FB22E341829DEED006775EF /* FOWNomalViewCell.m */,
+				4FB22E361829DF01006775EF /* FOWNomalViewCell.xib */,
 				4FB1F413182200AE004DE2F5 /* FOWTableViewController.h */,
 				4FB1F414182200AE004DE2F5 /* FOWTableViewController.m */,
 				4FB1F416182202A3004DE2F5 /* FOWViewCell.h */,
 				4FB1F417182202A3004DE2F5 /* FOWViewCell.m */,
-				4FB1F427182211C6004DE2F5 /* FOWNavigationController.h */,
-				4FB1F428182211C6004DE2F5 /* FOWNavigationController.m */,
-				4FB5C7531827A59900346F21 /* FOWCustomTextView.h */,
-				4FB5C7541827A59900346F21 /* FOWCustomTextView.m */,
-				4FB22E331829DEED006775EF /* FOWNomalViewCell.h */,
-				4FB22E341829DEED006775EF /* FOWNomalViewCell.m */,
-				4FB22E361829DF01006775EF /* FOWNomalViewCell.xib */,
-				4FACCE8D182CC50500210557 /* FOWListFollowerViewController.h */,
-				4FACCE8E182CC50500210557 /* FOWListFollowerViewController.m */,
-				4FACCE8F182CC50500210557 /* FOWListFollowerViewController.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -299,7 +312,7 @@
 		4FB1F4251822107E004DE2F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4FACCE8C182CC4B800210557 /* ListFollowerController */,
+				4FACCE8C182CC4B800210557 /* FollowingMeController */,
 				4FB1F42618221092004DE2F5 /* MainController */,
 				4FACDEEE182B520000FB278E /* ReViewController */,
 				4FB1F41F18220710004DE2F5 /* PostScreenController */,
@@ -470,6 +483,7 @@
 				4FACCE91182CC50500210557 /* FOWListFollowerViewController.xib in Resources */,
 				4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
+				4FAEB9661830AE6800DA3200 /* FOWFollowersViewCell.xib in Resources */,
 				4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */,
 				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
 				4FB22E3B1829E1EB006775EF /* Facebook-Icon-300x300.png in Resources */,
@@ -502,6 +516,7 @@
 			files = (
 				4FACCE8B182CA3C000210557 /* FOWReviewViewController.m in Sources */,
 				4FD5A2FF18166A3F00987978 /* main.m in Sources */,
+				4FAEB9691830B16D00DA3200 /* FOWFollowingMeViewController.m in Sources */,
 				4FB1F42318220710004DE2F5 /* FOWPostPhotoViewController.m in Sources */,
 				4FB1F415182200AE004DE2F5 /* FOWTableViewController.m in Sources */,
 				4FB5C73F182750F200346F21 /* FOWUtils.m in Sources */,
@@ -509,6 +524,7 @@
 				4FB1F429182211C6004DE2F5 /* FOWNavigationController.m in Sources */,
 				4FB5C7551827A59900346F21 /* FOWCustomTextView.m in Sources */,
 				4FB5C7501827A1CA00346F21 /* FOWTitleViewCell.m in Sources */,
+				4FAEB9641830AE5200DA3200 /* FOWFollowersViewCell.m in Sources */,
 				4FB5C73E182750F200346F21 /* FOWUtil+View.m in Sources */,
 				4FB5C74618278B5000346F21 /* FOWManagerImageProcess.m in Sources */,
 				4FB1F418182202A3004DE2F5 /* FOWViewCell.m in Sources */,

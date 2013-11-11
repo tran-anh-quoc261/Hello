@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FOWListFollowerViewController : UITableViewController
+@interface FOWListFollowerViewController : UITableViewController {
+    NSMutableArray *_arrayFollower;
+}
+
+@property (nonatomic, strong) NSMutableArray *arrayFollower;
 
 @end

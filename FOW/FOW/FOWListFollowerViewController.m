@@ -7,12 +7,14 @@
 //
 
 #import "FOWListFollowerViewController.h"
+#import "FOWFollowersViewCell.h"
 
 @interface FOWListFollowerViewController ()
 
 @end
 
 @implementation FOWListFollowerViewController
+@synthesize arrayFollower = _arrayFollower;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -26,10 +28,7 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,22 +41,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FOWFollowersViewCell *viewCell = [FOWUtils loadView:[FOWFollowersViewCell class] FromNib:@"FOWFollowersViewCell"];
+    [viewCell caliculateHeight];
+    return [viewCell getHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
     
     // Configure the cell...
+    FOWFollowersViewCell *viewCell = [FOWUtils loadView:[FOWFollowersViewCell class] FromNib:@"FOWFollowersViewCell"];
+    [cell addSubview:viewCell];
     
     return cell;
 }

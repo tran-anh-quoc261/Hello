@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="btnChooseAPhoto" destination="jTl-MF-lvc" id="tRG-kT-gJt"/>
+                <outlet property="btnShowFollower" destination="03d-sL-jwv" id="jcZ-H1-hgf"/>
                 <outlet property="btnTakeAPicture" destination="D7r-mV-OTQ" id="sqI-dA-Gsg"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -45,6 +46,17 @@
                     </state>
                     <connections>
                         <action selector="takePictureAction:" destination="-1" eventType="touchUpInside" id="b18-ee-haM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="03d-sL-jwv">
+                    <rect key="frame" x="20" y="239" width="280" height="35"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Show List Follower">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showFollower:" destination="-1" eventType="touchUpInside" id="q6U-9O-rET"/>
                     </connections>
                 </button>
             </subviews>

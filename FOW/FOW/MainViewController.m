@@ -12,6 +12,7 @@
 #import "AFPhotoEditorController.h"
 #import "AFOpenGLManager.h"
 #import "FOWManagerImageProcess.h"
+#import "FOWFollowingMeViewController.h"
 
 
 @interface MainViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate>
@@ -67,6 +68,11 @@
     UIImage * darkButtonActive = [[UIImage imageNamed:@"dark_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
     [[self btnChooseAPhoto] setBackgroundImage:darkButton forState:UIControlStateNormal];
     [[self btnChooseAPhoto] setBackgroundImage:darkButtonActive forState:UIControlStateHighlighted];
+    
+    UIImage *redButton = [[UIImage imageNamed:@"red_button.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
+    UIImage *redButtonActive = [[UIImage imageNamed:@"red_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
+    [[self btnShowFollower] setBackgroundImage:redButton forState:UIControlStateNormal];
+    [[self btnShowFollower] setBackgroundImage:redButtonActive forState:UIControlStateHighlighted];
 }
 
 #pragma mark - Photo Editor Delegate Methods
@@ -154,5 +160,10 @@
         
         [self presentViewController:imagePicker animated:YES completion:nil];
     }
+}
+
+- (IBAction)showFollower:(id)sender {
+    FOWFollowingMeViewController *controller = [[FOWFollowingMeViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end
