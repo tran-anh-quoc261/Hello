@@ -28,7 +28,7 @@
 		4F35158B181920BA0051A8D6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35158A181920BA0051A8D6 /* SystemConfiguration.framework */; };
 		4F5293951818B97300B3FD75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293941818B97300B3FD75 /* Images.xcassets */; };
 		4F5293991818C11700B3FD75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5293971818C11700B3FD75 /* MainViewController.m */; };
-		4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5293981818C11700B3FD75 /* MainViewController.xib */; };
+		4F96407D1831CCB000A93E6F /* FOWFollowersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F96407C1831CCB000A93E6F /* FOWFollowersViewCell.xib */; };
 		4FACCE85182CA24600210557 /* red_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE81182CA24600210557 /* red_button_pressed.png */; };
 		4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE82182CA24600210557 /* red_button_pressed@2x.png */; };
 		4FACCE87182CA24600210557 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FACCE83182CA24600210557 /* red_button.png */; };
@@ -40,7 +40,6 @@
 		4FAD3E7E1828D103008C277A /* FOWCategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7D1828D103008C277A /* FOWCategoryViewCell.m */; };
 		4FAD3E801828D11B008C277A /* FOWCategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */; };
 		4FAEB9641830AE5200DA3200 /* FOWFollowersViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */; };
-		4FAEB9661830AE6800DA3200 /* FOWFollowersViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */; };
 		4FAEB9691830B16D00DA3200 /* FOWFollowingMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */; };
 		4FAEB96B1830BE8F00DA3200 /* avatar_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAEB96A1830BE8F00DA3200 /* avatar_user.png */; };
 		4FB17D53181A1C780041FB2B /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17D52181A1C780041FB2B /* border.png */; };
@@ -71,6 +70,7 @@
 		4FD5A30518166A3F00987978 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30418166A3F00987978 /* Default.png */; };
 		4FD5A30718166A3F00987978 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30618166A3F00987978 /* Default@2x.png */; };
 		4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5A30818166A3F00987978 /* Default-568h@2x.png */; };
+		4FECCAA61831D101000E912B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FECCAA51831D101000E912B /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,7 +105,7 @@
 		4F5293941818B97300B3FD75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F5293961818C11700B3FD75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4F5293971818C11700B3FD75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4F5293981818C11700B3FD75 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4F96407C1831CCB000A93E6F /* FOWFollowersViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWFollowersViewCell.xib; sourceTree = "<group>"; };
 		4FACCE81182CA24600210557 /* red_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_pressed.png; sourceTree = "<group>"; };
 		4FACCE82182CA24600210557 /* red_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_pressed@2x.png"; sourceTree = "<group>"; };
 		4FACCE83182CA24600210557 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 		4FAD3E7F1828D11B008C277A /* FOWCategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWCategoryViewCell.xib; sourceTree = "<group>"; };
 		4FAEB9621830AE5200DA3200 /* FOWFollowersViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFollowersViewCell.h; sourceTree = "<group>"; };
 		4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFollowersViewCell.m; sourceTree = "<group>"; };
-		4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FOWFollowersViewCell.xib; sourceTree = "<group>"; };
 		4FAEB9671830B16D00DA3200 /* FOWFollowingMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWFollowingMeViewController.h; sourceTree = "<group>"; };
 		4FAEB9681830B16D00DA3200 /* FOWFollowingMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWFollowingMeViewController.m; sourceTree = "<group>"; };
 		4FAEB96A1830BE8F00DA3200 /* avatar_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_user.png; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		4FD5A30418166A3F00987978 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4FD5A30618166A3F00987978 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4FD5A30818166A3F00987978 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4FECCAA51831D101000E912B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +275,7 @@
 				4FB5C7541827A59900346F21 /* FOWCustomTextView.m */,
 				4FAEB9621830AE5200DA3200 /* FOWFollowersViewCell.h */,
 				4FAEB9631830AE5200DA3200 /* FOWFollowersViewCell.m */,
-				4FAEB9651830AE6800DA3200 /* FOWFollowersViewCell.xib */,
+				4F96407C1831CCB000A93E6F /* FOWFollowersViewCell.xib */,
 				4FACCE8D182CC50500210557 /* FOWListFollowerViewController.h */,
 				4FACCE8E182CC50500210557 /* FOWListFollowerViewController.m */,
 				4FACCE8F182CC50500210557 /* FOWListFollowerViewController.xib */,
@@ -327,7 +327,7 @@
 			children = (
 				4F5293961818C11700B3FD75 /* MainViewController.h */,
 				4F5293971818C11700B3FD75 /* MainViewController.m */,
-				4F5293981818C11700B3FD75 /* MainViewController.xib */,
+				4FECCAA51831D101000E912B /* MainViewController.xib */,
 			);
 			name = MainController;
 			sourceTree = "<group>";
@@ -487,9 +487,7 @@
 				4FACCE91182CC50500210557 /* FOWListFollowerViewController.xib in Resources */,
 				4FB5C74D1827A13B00346F21 /* FOWMainViewCell.xib in Resources */,
 				4F35156318191CBF0051A8D6 /* dark_button.png in Resources */,
-				4FAEB9661830AE6800DA3200 /* FOWFollowersViewCell.xib in Resources */,
 				4FACCE86182CA24600210557 /* red_button_pressed@2x.png in Resources */,
-				4F52939A1818C11700B3FD75 /* MainViewController.xib in Resources */,
 				4FB22E3B1829E1EB006775EF /* Facebook-Icon-300x300.png in Resources */,
 				4F35156618191CBF0051A8D6 /* dark_button_pressed@2x.png in Resources */,
 				4FB17D53181A1C780041FB2B /* border.png in Resources */,
@@ -508,6 +506,8 @@
 				4FB5C7521827A1E600346F21 /* FOWTitleViewCell.xib in Resources */,
 				4FD5A30918166A3F00987978 /* Default-568h@2x.png in Resources */,
 				4FACCE87182CA24600210557 /* red_button.png in Resources */,
+				4F96407D1831CCB000A93E6F /* FOWFollowersViewCell.xib in Resources */,
+				4FECCAA61831D101000E912B /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

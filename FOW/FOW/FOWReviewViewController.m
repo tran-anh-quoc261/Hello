@@ -9,6 +9,7 @@
 #import "FOWReviewViewController.h"
 #import "AFPhotoEditorController.h"
 #import "FOWManagerImageProcess.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define kButtonLeft                 100
 #define kButtonRight                101
