@@ -314,6 +314,7 @@
 		4FB1F4251822107E004DE2F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4FFB437018322EAA00C550ED /* DetailPostController */,
 				4FACCE8C182CC4B800210557 /* FollowingMeController */,
 				4FB1F42618221092004DE2F5 /* MainController */,
 				4FACDEEE182B520000FB278E /* ReViewController */,
@@ -425,6 +426,13 @@
 				4FB5C7401827521900346F21 /* Constants.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FFB437018322EAA00C550ED /* DetailPostController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DetailPostController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
