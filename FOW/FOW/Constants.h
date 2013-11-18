@@ -7,3 +7,5 @@
 //
 
 #define kFOWManagerEditPhoto              [FOWManagerImageProcess instance]
+#define kFOWManagerFacebook               [FOWManagerFacebookProcess instance]
+#define kFOWAppDelegate                   (AppDelegate*)[[UIApplication sharedApplication] delegate]

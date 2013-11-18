@@ -15,6 +15,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "AFPhotoEditorController.h"
 #import "FOWReviewViewController.h"
+#import "FOWManagerFacebookProcess.h"
 
 #define kButtonLeft                 100
 #define kButtonRight                101
@@ -24,6 +25,8 @@
 #define kButtonShowPhoto3           105
 #define kButtonShowPhoto4           106
 #define kButtonShowPhoto5           107
+#define kButtonChooseCategory       108
+#define kButtonActiveFacebook       109
 
 @interface FOWPostPhotoViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate, FOWReviewViewControllerDelegate>
 
@@ -33,13 +36,12 @@
 
 @implementation FOWPostPhotoViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationItem setTitle:@"Post Photo"];
     [self.navigationItem setHidesBackButton:YES];
-    gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
+    self.gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
     
     // Allocate Asset Library
     ALAssetsLibrary * assetLibrary = [[ALAssetsLibrary alloc] init];
@@ -48,12 +50,7 @@
     [self setupView];
 }
 
-- (void)dealloc {
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -73,7 +70,7 @@
     [rightButton setTag:kButtonRight];
     [self.navigationItem setRightBarButtonItem:rightButton];
     
-    dataSource = [[NSMutableArray alloc] init];
+    _dataSource = [[NSMutableArray alloc] init];
     
     NSMutableArray *section0 = [[NSMutableArray alloc] init];
     FOWMainViewCell *cell0_1 = [FOWUtils loadView:[FOWMainViewCell class] FromNib:@"FOWMainViewCell"];
@@ -98,25 +95,38 @@
     
     [section0 addObject:cell0_1];
     
-    [dataSource addObject:section0];
+    [_dataSource addObject:section0];
     
     NSMutableArray *section1 = [[NSMutableArray alloc] init];
     FOWTitleViewCell *cell1_1 = [FOWUtils loadView:[FOWTitleViewCell class] FromNib:@"FOWTitleViewCell"];
     [section1 addObject:cell1_1];
     [cell1_1.txtTitle setDelegate:self];
-    [dataSource addObject:section1];
+    [_dataSource addObject:section1];
     
     NSMutableArray *section2 = [[NSMutableArray alloc] init];
     FOWCategoryViewCell *cell2_1 = [FOWUtils loadView:[FOWCategoryViewCell class] FromNib:@"FOWCategoryViewCell"];
+    
+    [cell2_1.btnCategory setTag:kButtonChooseCategory];
+    [cell2_1.btnCategory addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     [section2 addObject:cell2_1];
     
-    [dataSource addObject:section2];
+    [_dataSource addObject:section2];
     
     NSMutableArray *section3 = [[NSMutableArray alloc] init];
     FOWNomalViewCell *cell3_1 = [FOWUtils loadView:[FOWNomalViewCell class] FromNib:@"FOWNomalViewCell"];
+    [cell3_1.imgIcon setImage:[UIImage imageNamed:@"facebook_icon.png"]];
+    [cell3_1.lblTitle setText:@"Facebook"];
+    if (![kFOWManagerFacebook isFacebookConnectActive]) {
+        [cell3_1.lblTitle setTextColor:[UIColor darkGrayColor]];
+    } else {
+        [cell3_1.lblTitle setTextColor:[UIColor blueColor]];
+    }
+    [cell3_1.btnCellClickAction setTag:kButtonActiveFacebook];
+    [cell3_1.btnCellClickAction addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [section3 addObject:cell3_1];
     
-    [dataSource addObject:section3];
+    [_dataSource addObject:section3];
 }
 
 #pragma mark - Private method Helper
@@ -134,25 +144,29 @@
 
 - (void)savePhotoDidFinish {
     // Action receive when edit image did finish
-    FOWMainViewCell *cell = (FOWMainViewCell*)[[dataSource objectAtIndex:0] objectAtIndex:0];
+    FOWMainViewCell *cell = (FOWMainViewCell*)[[_dataSource objectAtIndex:0] objectAtIndex:0];
     if (cell) {
         [cell configView];
     }
 }
 
+#pragma mark - Data and API Area
+
+
+
 #pragma mark - TableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return [dataSource count];
+    return [_dataSource count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [[dataSource objectAtIndex:section] count];
+    return [[_dataSource objectAtIndex:section] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FOWViewCell *cell = [[dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    FOWViewCell *cell = [[_dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     [cell caliculateHeight];
     return [cell getHeight];
 }
@@ -165,7 +179,7 @@
     }
     
     // Configure the cell...
-    FOWViewCell *customCell = (FOWViewCell*)[[dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    FOWViewCell *customCell = (FOWViewCell*)[[_dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     [cell addSubview:customCell];
     
     return cell;
@@ -197,19 +211,19 @@
 
 #pragma mark - TextView Delegate
 - (void) textViewDidBeginEditing:(UITextView *)textView {
-    [self.view addGestureRecognizer:gesture];
+    [self.view addGestureRecognizer:_gesture];
 }
 - (void)textViewDidEndEditing:(UITextView *)textView {
-    [self.view removeGestureRecognizer:gesture];
+    [self.view removeGestureRecognizer:_gesture];
 }
 
 #pragma mark - TextField Delegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self.view addGestureRecognizer:gesture];
+    [self.view addGestureRecognizer:_gesture];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    [self.view removeGestureRecognizer:gesture];
+    [self.view removeGestureRecognizer:_gesture];
 }
 
 #pragma mark - AlertView Delegate and ActionSheet Delegate
@@ -260,7 +274,7 @@
 - (void) photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image {
     void(^completion)(void)  = ^(void){
         [kFOWManagerEditPhoto addImage:image];
-        FOWMainViewCell *cell = (FOWMainViewCell*)[[dataSource objectAtIndex:0] objectAtIndex:0];
+        FOWMainViewCell *cell = (FOWMainViewCell*)[[_dataSource objectAtIndex:0] objectAtIndex:0];
         if (cell) {
             [cell configView];
         }
@@ -363,6 +377,27 @@
             
         case kButtonShowPhoto5: {
             [self showReviewControllerWithIndexImage:4];
+            break;
+        }
+            
+        case kButtonChooseCategory: {
+            // Show popup data choose category
+            
+            break;
+        }
+            
+        case kButtonActiveFacebook: {
+            // Active facebook to post
+            [kFOWManagerFacebook setIsConnect:![kFOWManagerFacebook isFacebookConnectActive]];
+            FOWNomalViewCell *cell = (FOWNomalViewCell*)[[_dataSource objectAtIndex:3] objectAtIndex:0];
+            if (cell) {
+                if ([kFOWManagerFacebook isFacebookConnectActive]) {
+                    [cell.lblTitle setTextColor:[UIColor blueColor]];
+                } else {
+                    [cell.lblTitle setTextColor:[UIColor darkGrayColor]];
+                }
+            }
+            
             break;
         }
             

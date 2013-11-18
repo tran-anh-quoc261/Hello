@@ -1,14 +1,14 @@
 //
-//  FOWNomalViewCell.m
+//  FOWDetailActionViewCell.m
 //  FOW
 //
-//  Created by Anh Quoc on 11/6/13.
+//  Created by Anh Quoc on 11/14/13.
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#import "FOWNomalViewCell.h"
+#import "FOWDetailActionViewCell.h"
 
-@implementation FOWNomalViewCell
+@implementation FOWDetailActionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,7 +32,7 @@
 }
 
 - (void)layoutSubviews {
-    [self.btnCellClickAction setExclusiveTouch:YES];
+    
 }
 
 @end

@@ -21,23 +21,27 @@
 
 -(void)caliculateHeight {
     height = self.frame.size.height;
-    [self configView];
 }
 
 -(CGFloat)getHeight {
 	return height;
 }
 
-- (void)configView {
-    
-}
-
 - (void)layoutSubviews {
+    // Called when load view
     
 }
 
-- (void)dealloc {
-    
+- (IBAction)txtChangeValue:(id)sender {
+    UITextField *textField = (UITextField *)sender;
+    NSInteger textLength = [FOWUtils trimString:textField.text].length;
+    [_lblCountCharactor setText:[NSString stringWithFormat:@"%d/15", textLength]];
+    if (textLength > 15) {
+        [_lblCountCharactor setTextColor:[UIColor redColor]];
+        _flagTextViewError = YES;
+    } else {
+        [_lblCountCharactor setTextColor:[UIColor lightGrayColor]];
+        _flagTextViewError = NO;
+    }
 }
-
 @end

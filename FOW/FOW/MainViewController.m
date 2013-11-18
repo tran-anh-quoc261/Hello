@@ -13,6 +13,7 @@
 #import "AFOpenGLManager.h"
 #import "FOWManagerImageProcess.h"
 #import "FOWFollowingMeViewController.h"
+#import "FOWDetailPostViewController.h"
 
 
 @interface MainViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, AFPhotoEditorControllerDelegate, UIActionSheetDelegate>
@@ -73,6 +74,9 @@
     UIImage *redButtonActive = [[UIImage imageNamed:@"red_button_pressed.png"] stretchableImageWithLeftCapWidth:7.0f topCapHeight:0.0f];
     [[self btnShowFollower] setBackgroundImage:redButton forState:UIControlStateNormal];
     [[self btnShowFollower] setBackgroundImage:redButtonActive forState:UIControlStateHighlighted];
+    
+    [[self btnShowDetailPost] setBackgroundImage:darkButton forState:UIControlStateNormal];
+    [[self btnShowDetailPost] setBackgroundImage:darkButtonActive forState:UIControlStateHighlighted];
 }
 
 #pragma mark - Photo Editor Delegate Methods
@@ -169,6 +173,16 @@
                                                                             action:nil];
     
     FOWFollowingMeViewController *controller = [[FOWFollowingMeViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)showDetailPost:(id)sender {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" 
+                                                                             style:UIBarButtonItemStyleBordered
+                                                                            target:nil
+                                                                            action:nil];
+    
+    FOWDetailPostViewController *controller = [[FOWDetailPostViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end

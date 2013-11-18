@@ -9,6 +9,8 @@
 #import "FOWListFollowerViewController.h"
 #import "FOWFollowersViewCell.h"
 
-@interface FOWFollowingMeViewController : FOWListFollowerViewController
+@interface FOWFollowingMeViewController : FOWListFollowerViewController {
+    
+}
 
 @end

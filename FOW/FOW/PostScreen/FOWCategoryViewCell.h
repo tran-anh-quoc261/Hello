@@ -10,6 +10,7 @@
 
 @interface FOWCategoryViewCell : FOWViewCell
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sgmCategory;
 @property (weak, nonatomic) IBOutlet UIButton *btnCategory;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @end

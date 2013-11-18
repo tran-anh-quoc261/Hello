@@ -13,10 +13,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnTakeAPicture;
 @property (weak, nonatomic) IBOutlet UIButton *btnChooseAPhoto;
 @property (weak, nonatomic) IBOutlet UIButton *btnShowFollower;
+@property (weak, nonatomic) IBOutlet UIButton *btnShowDetailPost;
 
 
 - (IBAction)takePictureAction:(id)sender;
 - (IBAction)choosePhotoAction:(id)sender;
 - (IBAction)showFollower:(id)sender;
+- (IBAction)showDetailPost:(id)sender;
 
 @end

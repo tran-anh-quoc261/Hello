@@ -1,20 +1,21 @@
 //
-//  FOWNomalViewCell.m
+//  FOWDetailViewCell.m
 //  FOW
 //
-//  Created by Anh Quoc on 11/6/13.
+//  Created by Anh Quoc on 11/14/13.
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#import "FOWNomalViewCell.h"
+#import "FOWDetailMainViewCell.h"
 
-@implementation FOWNomalViewCell
+@implementation FOWDetailMainViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
     }
     return self;
 }
@@ -32,7 +33,7 @@
 }
 
 - (void)layoutSubviews {
-    [self.btnCellClickAction setExclusiveTouch:YES];
+    [self.imgReview setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 @end

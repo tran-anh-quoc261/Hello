@@ -8,8 +8,11 @@
 
 #import "FOWViewCell.h"
 
-@interface FOWTitleViewCell : FOWViewCell
+@interface FOWTitleViewCell : FOWViewCell <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblCountCharactor;
+@property (assign, nonatomic) BOOL flagTextViewError;
 
+- (IBAction)txtChangeValue:(id)sender;
 @end

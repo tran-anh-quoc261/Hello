@@ -16,5 +16,6 @@
 
 + (NSString *)trimString:(NSString*)string;
 + (BOOL) hasValidAPIKey;
++ (UIView *) getMainView;
 
 @end

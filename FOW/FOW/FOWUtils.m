@@ -7,6 +7,7 @@
 //
 
 #import "FOWUtils.h"
+#import "AppDelegate.h"
 
 @implementation FOWUtils
 // Trim space of string
@@ -31,6 +32,10 @@
 	dateFormatter.dateFormat = format;
 	return [dateFormatter stringFromDate:date];
 	
+}
+
++ (UIView *) getMainView {
+    return [kFOWAppDelegate window];
 }
 
 #pragma mark - Data

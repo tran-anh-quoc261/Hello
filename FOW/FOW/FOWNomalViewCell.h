@@ -10,4 +10,7 @@
 
 @interface FOWNomalViewCell : FOWViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgIcon;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UIButton *btnCellClickAction;
 @end

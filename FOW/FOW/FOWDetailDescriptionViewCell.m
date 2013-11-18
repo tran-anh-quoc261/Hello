@@ -1,14 +1,14 @@
 //
-//  FOWNomalViewCell.m
+//  FOWDetailDescriptionViewCell.m
 //  FOW
 //
-//  Created by Anh Quoc on 11/6/13.
+//  Created by Anh Quoc on 11/14/13.
 //  Copyright (c) 2013 Mulodo. All rights reserved.
 //
 
-#import "FOWNomalViewCell.h"
+#import "FOWDetailDescriptionViewCell.h"
 
-@implementation FOWNomalViewCell
+@implementation FOWDetailDescriptionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -27,12 +27,9 @@
 	return height;
 }
 
-- (void)configView {
+- (void)layoutSubviews {
     
 }
 
-- (void)layoutSubviews {
-    [self.btnCellClickAction setExclusiveTouch:YES];
-}
 
 @end
